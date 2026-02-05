@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #5046e5;
+  --color-primary-glow: rgba(80, 70, 229, 0.15);
+  --color-secondary: #7c3aed;
+  --color-accent: #f59e0b;
+  --color-text-dark: #0f172a;
+  --color-text-muted: #64748b;
+  --color-bg-alt: #f8fafc;
+
+  --font-inter: "Inter", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+
+  --shadow-premium: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - 1rem));
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-inter text-text-dark bg-white overflow-x-hidden leading-relaxed;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-outfit font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-br from-primary to-secondary text-white px-7 py-3 rounded-full font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_25px_-5px_var(--color-primary-glow)] shadow-[0_10px_15px_-3px_var(--color-primary-glow)] cursor-pointer;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-slate-200 rounded-[1.5rem] p-8 transition-transform duration-300 hover:-translate-y-1.5;
+  }
+}
