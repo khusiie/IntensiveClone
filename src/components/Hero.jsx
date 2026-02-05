@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Hero = () => {
     const bottomFeatures = [
@@ -8,38 +8,72 @@ const Hero = () => {
         { icon: '🎯', label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors' }
     ];
 
+    const [showErrors, setShowErrors] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShowErrors(true);
+    };
+
     return (
         <section className="relative bg-white overflow-hidden" id="hero">
-            {/* Announcement Bar */}
-            <div className="bg-[#1e293b] py-2.5 text-center">
-                <p className="text-white text-sm font-medium">
-                    <span className="mr-2">🎉</span>
-                    NxtWave Intensive Offline Center is starting in Hyderabad.
-                    <a href="#" className="text-[#38bdf8] font-bold ml-2 hover:underline">Check it Out →</a>
-                </p>
+            {/* Announcement Bar with Confetti */}
+            <div className="bg-[#1e293b] py-4 relative overflow-hidden">
+                <div className="flex justify-center items-center gap-4 lg:gap-6 px-4">
+                    {/* Left Confetti */}
+                    <img
+                        src="/src/assets/image copy.png"
+                        alt=""
+                        className="w-[120px] lg:w-[150px] opacity-90 pointer-events-none hidden lg:block flex-shrink-0"
+                    />
+
+                    {/* Text Content */}
+                    <div className="text-[#d9f99d] text-lg font-normal text-center relative z-10 flex items-center justify-center">
+                        <div className="flex items-center flex-wrap justify-center gap-2">
+                            <img src="/src/assets/image copy 2.png" alt="" className="inline-block w-6 h-6" />
+                            <span>NxtWave Intensive Offline Center is starting in Hyderabad.</span>
+                            <a href="#" className="text-white text-sm font-normal hover:underline inline-flex items-center gpx-3 py-1 whitespace-nowrap">
+                                Check it Out
+                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Right Confetti */}
+                    <img
+                        src="/src/assets/image copy.png"
+                        alt=""
+                        className="w-[120px] lg:w-[150px] opacity-90 pointer-events-none hidden lg:block transform scale-x-[-1] flex-shrink-0"
+                    />
+                </div>
             </div>
+
+
 
             {/* Main Hero Content */}
             <div className="relative min-h-[600px]">
+
                 {/* Curved Teal Background */}
                 <div className="absolute right-0 top-0 w-[55%] h-full bg-gradient-to-br from-[#2dd4bf] to-[#14b8a6] rounded-bl-[100px] -z-10"></div>
 
                 {/* Dark decorative strip on extreme right */}
                 <div className="absolute right-0 top-0 w-[60px] h-full bg-[#0f172a] -z-20"></div>
 
-                <div className="max-w-[1300px] mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+                <div className="max-w-[1300px] mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
 
                     {/* Left Content */}
                     <div className="space-y-10 z-10">
-                        {/* NEW Badge */}
-                        <div className="flex items-center gap-3">
-                            <span className="bg-[#ef4444] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">NEW</span>
+                        {/* NEW Badge Section */}
+                        <div className="inline-flex items-center gap-3 border border-slate-200 rounded-full px-2 py-1 pr-4 shadow-sm bg-white">
+                            <span className="bg-[#f97316] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">NEW</span>
                             <span className="text-slate-600 font-bold text-sm">Intensive 3.0 to 3x your placement chances</span>
                         </div>
 
                         {/* Main Headline */}
-                        <div>
-                            <h1 className="text-5xl md:text-[58px] font-black text-[#183b56] leading-[1.1]">
+                        <div className="text-center md:text-left">
+                            <h1 className="text-[44px] md:text-[54px] font-medium text-[#1e293b] leading-[1.1] mb-4">
                                 A Proven Program<br />
                                 To Make You a<br />
                                 <span className="text-[#f97316]">Full Stack Developer</span>
@@ -86,48 +120,83 @@ const Hero = () => {
 
                         {/* Demo Form Card */}
                         <div className="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] p-10 relative z-10 ml-auto max-w-[400px]">
-                            <h3 className="text-2xl font-black text-[#183b56] mb-1">Book a Live Demo</h3>
-                            <h3 className="text-2xl font-black mb-8">For <span className="text-[#f97316]">Free !</span></h3>
+                            <div className="flex justify-between items-start mb-6">
+                                <div>
+                                    <h3 className="text-[28px] leading-tight font-black text-[#0f172a] mb-1">Book a Live Demo</h3>
+                                    <h3 className="text-[28px] leading-tight font-black text-[#0f172a]">
+                                        For <span className="relative inline-block">
+                                            Free !
+                                            <svg className="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                                <path d="M0 5 Q 25 10, 50 5 T 100 5" stroke="#7c3aed" strokeWidth="3" fill="transparent" strokeLinecap="round" />
+                                            </svg>
+                                        </span>
+                                    </h3>
+                                </div>
+                                <div className="relative">
+                                    <img src="/src/assets/image copy 3.png" alt="Demo Character" className="w-[100px] h-auto relative z-10" />
+                                    {/* Gray Shelf */}
+                                    <div className="absolute bottom-0 left-[-10px] right-[-10px] h-[4px] bg-slate-200 rounded-full"></div>
+                                </div>
+                            </div>
 
-                            <form className="space-y-5">
+                            <form className="space-y-5" onSubmit={handleSubmit}>
                                 <div>
                                     <label className="block text-sm font-bold text-slate-500 mb-2">Name</label>
-                                    <input type="text" placeholder="Enter Your Name" className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed]" />
+                                    <input
+                                        type="text"
+                                        placeholder="Enter Your Name"
+                                        className={`w-full px-4 py-3 rounded-xl border ${showErrors ? 'border-red-300' : 'border-slate-200'} text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed]`}
+                                    />
+                                    {showErrors && <p className="text-[11px] text-red-500 mt-1">*Required</p>}
                                 </div>
                                 <div>
                                     <label className="block text-sm font-bold text-slate-500 mb-2">Mobile Number (WhatsApp Number)</label>
                                     <div className="flex gap-2">
-                                        <select className="px-3 py-3 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none">
-                                            <option>IN +91</option>
-                                        </select>
-                                        <input type="tel" placeholder="Enter Mobile Number" className="flex-1 px-4 py-3 rounded-xl border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 focus:border-[#7c3aed]" />
+                                        <div className={`flex items-center gap-1 px-3 py-3 rounded-xl border ${showErrors ? 'border-red-300' : 'border-slate-200'} text-sm font-medium focus-within:ring-2 focus-within:ring-[#7c3aed]/30 focus-within:border-[#7c3aed] flex-1`}>
+                                            <span className="text-slate-700 font-bold">IN +91</span>
+                                            <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                                            <input type="tel" placeholder="Enter Mobile Number" className="flex-1 bg-transparent border-none focus:ring-0 text-sm font-medium outline-none" />
+                                        </div>
                                     </div>
+                                    {showErrors && <p className="text-[11px] text-red-500 mt-1">*Required</p>}
                                     <p className="text-[11px] text-slate-400 mt-1.5">We assure you that we practice a strict 'NO SPAM' policy</p>
                                 </div>
                                 <div>
                                     <label className="block text-sm font-bold text-slate-500 mb-2">Highest Qualification</label>
-                                    <select className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-medium text-slate-400 focus:outline-none">
-                                        <option>Select Highest Qualification</option>
-                                    </select>
+                                    <div className="relative">
+                                        <select className={`w-full px-4 py-3 rounded-xl border ${showErrors ? 'border-red-300' : 'border-slate-200'} text-sm font-medium ${showErrors ? 'text-red-700' : 'text-slate-400'} bg-white focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 appearance-none`}>
+                                            <option>Select Highest Qualification</option>
+                                        </select>
+                                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                                        </div>
+                                    </div>
+                                    {showErrors && <p className="text-[11px] text-red-500 mt-1">*Required</p>}
                                 </div>
                                 <div>
                                     <label className="block text-sm font-bold text-slate-500 mb-2">Native State</label>
-                                    <select className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm font-medium text-slate-400 focus:outline-none">
-                                        <option>Enter your State</option>
-                                    </select>
+                                    <div className="relative">
+                                        <select className={`w-full px-4 py-3 rounded-xl border ${showErrors ? 'border-red-300' : 'border-slate-200'} text-sm font-medium text-slate-400 bg-white focus:outline-none focus:ring-2 focus:ring-[#7c3aed]/30 appearance-none`}>
+                                            <option>Enter your State</option>
+                                        </select>
+                                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <p className="text-[11px] text-slate-400 pt-2">
                                     By proceeding further, I agree to the <a href="#" className="text-[#2563eb] underline">Terms & Conditions</a> and <a href="#" className="text-[#2563eb] underline">Privacy Policy</a> of NxtWave
                                 </p>
 
-                                <button type="submit" className="w-full bg-[#f97316] text-white py-4 rounded-xl font-black text-lg shadow-[0_10px_25px_-8px_rgba(249,115,22,0.5)] hover:bg-[#ea580c] transition-all transform hover:-translate-y-0.5">
+                                <button type="submit" className="w-full bg-[#7c3aed] text-white py-4 rounded-xl font-black text-lg shadow-[0_10px_25px_-8px_rgba(249,115,22,0.5)] hover:bg-[#ea580c] transition-all transform hover:-translate-y-0.5">
                                     Book My Demo
                                 </button>
                             </form>
 
-                            <p className="text-center text-xs text-slate-400 mt-6">Product of <span className="font-black text-[#183b56]">NXT</span><span className="font-black text-[#f97316]">WAVE</span></p>
+
                         </div>
+                        <p className="text-center text-xs text-slate-400 mt-6">Product of <span className="font-black text-[#183b56]">NXT</span><span className="font-black text-[#f97316]">WAVE</span></p>
                     </div>
                 </div>
             </div>
