@@ -4,16 +4,62 @@ import eligibilityIcon from '../assets/Third/image copy 2.png';
 import onlineIcon from '../assets/Third/image copy.png';
 import supportIcon from '../assets/Third/image copy 3.png';
 
+import testimonial1 from '../assets/Hero/image.png';
+import testimonial2 from '../assets/Hero/image copy.png';
+import testimonial3 from '../assets/Hero/image copy 2.png';
+import testimonial4 from '../assets/Hero/image copy 3.png';
+
 const Hero = () => {
 
     const bottomFeatures = [
-        { icon: durationIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
-        { icon: eligibilityIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
-        { icon: onlineIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
+        { icon: onlineIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
+        { icon: durationIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
+        { icon: eligibilityIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
         {
             icon: supportIcon, label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors'
         }
     ];
+
+    const testimonials = [
+        {
+            text: "From being a Delivery Boy in Swiggy to Programmer Analyst in an MNC!",
+            name: "Venkat Sai",
+            education: "Mechanical Engineering",
+            image: testimonial1,
+            companyLogo: "https://assets.ccbp.in/frontend/react-js/companies-exl-img.png"
+        },
+        {
+            text: "Non-IT to IT: Started my career as a Software Engineer at 4.5 LPA",
+            name: "Maddineni Bhargava",
+            education: "Civil Engineering",
+            image: testimonial2,
+            companyLogo: "https://assets.ccbp.in/frontend/react-js/professionals-microsoft-img.png"
+        },
+        {
+            text: "Gap of 3 years to settling in a high-paying software job",
+            name: "Manvendra Shah",
+            education: "B.Sc Computer Science",
+            image: testimonial3,
+            companyLogo: "https://assets.ccbp.in/frontend/react-js/professionals-aha-img.png"
+        },
+        {
+            text: "Mock interviews by the placement team helped me improve.",
+            name: "Bhargavi",
+            education: "CSE, JNTU",
+            image: testimonial4,
+            companyLogo: "https://assets.ccbp.in/frontend/react-js/companies-systech-img.png"
+        }
+    ];
+
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+    // Sync slider with vertical marquee (20s duration / 7 roles ≈ 2857ms)
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+        }, 2857);
+        return () => clearInterval(interval);
+    }, []);
 
     const [showErrors, setShowErrors] = useState(false);
     const roles = ["Software Engineer", "Data Engineer", "Full Stack Developer", "Data Analyst", "QA Engineer", "Software Developer", "NxtWave Learner"];
@@ -72,7 +118,7 @@ const Hero = () => {
 
 
             {/* Main Hero Content */}
-            <div className="relative min-h-[500px]">
+            <div className="relative min-h-[500px] mt-8">
 
                 {/* Curved Teal Background */}
                 <div className="absolute right-0 top-0 w-[55%] h-full bg-gradient-to-br from-[#2dd4bf] to-[#14b8a6] rounded-bl-[100px] -z-10"></div>
@@ -92,14 +138,14 @@ const Hero = () => {
 
                         {/* Main Headline */}
                         <div className="text-center md:text-left">
-                            <h1 className="text-[44px] md:text-[54px] font-medium text-[#1e293b] leading-[1.1] mb-4 tracking-wide">
+                            <h1 className="text-[32px] md:text-[48px] font-bold text-[#1e293b] leading-[48px] md:leading-[64px] mb-4 tracking-wide">
                                 A Proven Program<br />
                                 To Make You a<br />
-                                <div className="relative h-[70px] md:h-[90px] overflow-hidden">
-                                    <div className="animate-vertical-marquee flex flex-col">
+                                <div className="relative h-[48px] md:h-[64px] overflow-hidden inline-block align-bottom">
+                                    <div className="animate-vertical-marquee flex flex-col will-change-transform">
                                         {displayRoles.map((role, index) => (
-                                            <div key={index} className="h-[70px] md:h-[90px] flex items-center">
-                                                <span className="text-[#f97316] drop-shadow-sm whitespace-nowrap">{role}</span>
+                                            <div key={index} className="h-[48px] md:h-[64px] flex items-center">
+                                                <span className="text-[#ea580c] drop-shadow-sm whitespace-nowrap">{role}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -113,41 +159,43 @@ const Hero = () => {
                         </div>
 
                         {/* Testimonial Quote */}
-                        <div className="pt-4">
-                            <div className="relative pl-8 border-l-4 border-slate-200">
+                        <div className="pt-4 h-[180px]"> {/* Fixed height to prevent layout shifts */}
+                            <div className="relative pl-8 border-l-4 border-slate-200 transition-all duration-500">
                                 <span className="absolute -left-3 top-0 text-5xl text-slate-200 font-serif leading-none">"</span>
                                 <p className="text-lg font-bold text-slate-600 italic leading-relaxed mb-6">
-                                    From being a Delivery Boy in Swiggy to<br />
-                                    Programmer Analyst in an MNC!
+                                    {testimonials[activeTestimonial].text}
                                 </p>
                                 <div className="flex items-center gap-4">
-                                    <img src="https://assets.ccbp.in/frontend/react-js/professionals-1-img.png" alt="Venkat Sai" className="w-10 h-10 rounded-full object-cover" />
+                                    <img src={testimonials[activeTestimonial].image} alt={testimonials[activeTestimonial].name} className="w-16 h-16 rounded-full object-cover" />
                                     <div>
-                                        <p className="text-sm font-black text-[#183b56]">Venkat Sai</p>
-                                        <p className="text-xs text-slate-400 font-medium">Mechanical Engineering</p>
+                                        <p className="text-sm font-black text-[#183b56]">{testimonials[activeTestimonial].name}</p>
+                                        <p className="text-xs text-slate-400 font-medium">{testimonials[activeTestimonial].education}</p>
                                     </div>
                                     <div className="w-px h-8 bg-slate-200 mx-2"></div>
-                                    <img src="https://assets.ccbp.in/frontend/react-js/companies-exl-img.png" alt="EXL" className="h-6 object-contain" />
+                                    <img src={testimonials[activeTestimonial].companyLogo} alt="Company" className="h-6 object-contain" />
                                 </div>
                             </div>
                         </div>
 
                         {/* Carousel Dots */}
-                        <div className="flex items-center gap-2 pt-2">
-                            <div className="w-6 h-2 rounded-full bg-[#2563eb]"></div>
-                            <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                            <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                            <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                            <div className="w-2 h-2 rounded-full bg-slate-300"></div>
-                            <div className="w-2 h-2 rounded-full bg-slate-300"></div>
+                        <div className="flex items-center gap-2 pt-2 pl-8">
+                            {testimonials.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setActiveTestimonial(index)}
+                                    className={`rounded-full transition-all duration-300 ${activeTestimonial === index ? 'w-6 h-2 bg-[#2563eb]' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'}`}
+                                ></button>
+                            ))}
                         </div>
                     </div>
 
                     {/* Right Side - Form + Character */}
                     <div className="relative z-10">
-                        {/* Character Illustration */}
-                        <div className="absolute -left-24 bottom-0 w-[280px] z-0 pointer-events-none hidden lg:block">
-                            <img src="https://assets.ccbp.in/frontend/react-js/hero-character-img.png" alt="Student" className="w-full h-auto" />
+                        {/* Background Decoration */}
+                        <div
+                            className="absolute -left-64 -top-32 -right-32 -bottom-32 z-0 pointer-events-none hidden lg:block bg-contain bg-no-repeat bg-center opacity-80"
+                            style={{ backgroundImage: 'url(https://cdn.prod.website-files.com/5fa61cb5ed3ef7885b51d960/63bd0ef393f9c62c3e498308_1366-embed-form-bg-image.avif)' }}
+                        >
                         </div>
 
                         {/* Demo Form Card */}
@@ -239,7 +287,7 @@ const Hero = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {bottomFeatures.map((feat, i) => (
                             <div key={i} className="flex items-start gap-4">
-                                <img src={feat.icon} alt="" className="w-8 h-8 object-contain flex-shrink-0" />
+                                <img src={feat.icon} alt="" className="w-12 h-12 object-contain flex-shrink-0 mt-1" />
                                 <div>
                                     <div className="flex items-center gap-2 mb-1.5">
                                         <p className="text-white font-bold text-sm">{feat.label}</p>
@@ -260,7 +308,7 @@ const Hero = () => {
                     100% { transform: translateY(-50%); }
                 }
                 .animate-vertical-marquee {
-                    animation: vertical-marquee 40s linear infinite;
+                    animation: vertical-marquee 20s linear infinite;
                 }
             `}} />
         </section >

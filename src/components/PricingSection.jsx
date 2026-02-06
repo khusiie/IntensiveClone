@@ -44,8 +44,8 @@ const PricingSection = () => {
                             {/* Inclusions Grid */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-8">
                                 <div className="flex gap-3 items-center">
-                                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-lg font-medium text-[#475569]">Fundamentals of IT</p>
@@ -53,8 +53,8 @@ const PricingSection = () => {
                                 </div>
 
                                 <div className="flex gap-3 items-center">
-                                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-lg font-medium text-[#475569]">Unlimited opportunities from a pool of 3000+ companies</p>
@@ -62,8 +62,8 @@ const PricingSection = () => {
                                 </div>
 
                                 <div className="flex gap-3 items-center">
-                                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-lg font-medium text-[#475569]">9AM - 9PM Doubt Clarification.</p>
@@ -72,8 +72,8 @@ const PricingSection = () => {
                                 </div>
 
                                 <div className="flex gap-3 items-start">
-                                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                                     </div>
                                     <div className="flex flex-col gap-4 w-full">
                                         <p className="text-lg font-medium text-[#475569]">Multiple Job Tracks</p>
@@ -109,8 +109,8 @@ const PricingSection = () => {
                                 </div>
 
                                 <div className="flex gap-3 items-start">
-                                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
+                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
                                     </div>
                                     <div>
                                         <p className="text-lg font-medium text-[#475569] mb-3">Placement Support</p>
@@ -131,8 +131,8 @@ const PricingSection = () => {
 
                                 <div className="space-y-6">
                                     <div className="flex gap-3 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                                         </div>
                                         <div>
                                             <p className="text-lg font-medium text-[#475569]">10+ Real-time Projects for strong resume</p>
@@ -140,8 +140,8 @@ const PricingSection = () => {
                                     </div>
 
                                     <div className="flex gap-3 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                         </div>
                                         <div>
                                             <p className="text-lg font-medium text-[#475569]">24/7 Online Lab Access</p>
@@ -149,8 +149,8 @@ const PricingSection = () => {
                                     </div>
 
                                     <div className="flex gap-3 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
                                         </div>
                                         <div>
                                             <p className="text-sm text-slate-500">NxtWave Intensive is not a Job Guarantee Program. ⓘ</p>
@@ -159,8 +159,8 @@ const PricingSection = () => {
                                 </div>
                                 <div className="grid grid-cols-1 gap-4">
                                     <div className="flex gap-3 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                         </div>
                                         <div>
                                             <p className="text-md font-medium text-[#475569]">3 Hours classes and 3 Hours Labs Everyday</p>
@@ -168,8 +168,8 @@ const PricingSection = () => {
                                     </div>
 
                                     <div className="flex gap-3 items-center">
-                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
+                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                                         </div>
                                         <div>
                                             <p className="text-md font-medium text-[#475569]">Trainers: IIT alumni & Top MNCs like Amazon, Microsoft</p>

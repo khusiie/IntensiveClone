@@ -8,8 +8,6 @@ const IntensiveUpgradesSection = () => {
     const features = [
         {
             icon: liveIcon,
-            badge: 'LIVE',
-            badgeColor: 'bg-orange-500',
             title: 'Live Sessions (Monday to Friday)',
             description: 'To learn coding best practices, get interview tips, discuss doubts and more from experts.'
         },
