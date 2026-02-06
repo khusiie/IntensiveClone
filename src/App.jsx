@@ -13,6 +13,7 @@ import CompanyLogosSlider from './components/CompanyLogosSlider';
 import ProfessionalsGridSection from './components/ProfessionalsGridSection';
 import DoubtClarification from './components/DoubtClarification';
 import SeniorsPlacedSection from './components/SeniorsPlacedSection';
+import LearnerExperiences from './components/LearnerExperiences';
 import TrainersAlumniSection from './components/TrainersAlumniSection';
 import IntensiveUpgradesSection from './components/IntensiveUpgradesSection';
 import Footer from './components/Footer';
@@ -38,6 +39,7 @@ function App() {
         <RecognitionSlider />
         <PricingSection />
         <FAQ />
+        <LearnerExperiences />
         <MediaSection />
       </main>
       <Footer />
