@@ -32,7 +32,7 @@ const FAQ = () => {
         "Training Details": [
             {
                 question: "What is the duration of the program?",
-                answer: "The Fundamentals phase usually takes 2 months, followed by a 6-month job track (MERN or Java). It's self-paced with continuous placement support."
+                answer: "The Fundamentals phase usually takes 2 months, followed by a 6-month job track, either MERN Full Stack or Java Full Stack. While learning, you’ll work on multiple real-world projects to build a portfolio that you can showcase to recruiters, and you’ll also receive continuous placement support until you secure a job, including resume guidance, mock interviews, and interview preparation. The program is self-paced, so you can learn at your own convenience."
             },
             {
                 question: "What is the NxtWave Intensive curriculum? Why is it so successful in getting tech jobs?",
@@ -92,26 +92,31 @@ const FAQ = () => {
     const categories = Object.keys(categoryData);
 
     return (
-        <section id="faq" className="py-24 bg-[#f8fafc]">
+        <section id="faq" className="py-24 bg-[#fff]">
             <div className="max-w-[1200px] mx-auto px-6">
-                <h2 className="text-4xl font-extrabold text-[#183b56] mb-16">
+                <h2 className="text-[48px] font-bold text-[#183b56] mb-12">
                     Frequently Asked Questions
                 </h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-12">
-                    {/* Sidebar */}
-                    <div className="flex flex-col gap-2 border-l border-slate-200 h-fit">
+                    {/* Categories Tab List */}
+                    <div className="flex flex-row lg:flex-col gap-4 lg:gap-2 border-b lg:border-b-0 lg:border-l border-slate-200 pb-4 lg:pb-0 overflow-x-auto lg:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveCategory(cat)}
-                                className={`text-left px-6 py-3 text-sm font-bold transition-all relative ${activeCategory === cat
-                                        ? 'text-[#5046e5]'
-                                        : 'text-slate-400 hover:text-slate-600'
+                                className={`text-left px-4 py-2 lg:px-6 lg:py-3 text-sm lg:text-base font-bold transition-all relative flex-shrink-0 whitespace-nowrap ${activeCategory === cat
+                                    ? 'text-[#5046e5]'
+                                    : 'text-slate-400 hover:text-slate-600'
                                     }`}
                             >
                                 {activeCategory === cat && (
-                                    <div className="absolute left-[-1px] top-0 bottom-0 w-[2px] bg-[#5046e5]"></div>
+                                    <>
+                                        {/* Desktop Indicator (Left Line) */}
+                                        <div className="hidden lg:block absolute left-[-1px] top-0 bottom-0 w-[2px] bg-[#5046e5]"></div>
+                                        {/* Mobile Indicator (Bottom Line) */}
+                                        <div className="block lg:hidden absolute left-0 bottom-0 w-full h-[2px] bg-[#5046e5]"></div>
+                                    </>
                                 )}
                                 {cat}
                             </button>

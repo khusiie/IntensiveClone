@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="bg-white border-b border-slate-100 sticky top-0 z-50">
+            <nav className="bg-white border-b border-slate-100 relative z-50">
                 {/* Pink top accent line */}
                 <div className="h-1 bg-[#ec4899]"></div>
 
@@ -42,7 +42,7 @@ const Navbar = () => {
                                 href="#login"
                                 className="text-[16px] font-bold text-[#7c3aed] hover:text-[#6d28d9] transition-colors flex items-center"
                             >
-                                Login<span className="ml-1  text-xl">→</span>
+                                Login<span className="ml-1 font-bold">→</span>
                             </a>
 
                         </div>

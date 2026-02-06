@@ -1,34 +1,35 @@
 import React from 'react';
+import headerLogo from '../assets/media/headermedia/image.png';
 
 const LearnerExperiences = () => {
     const experiences = [
         {
-            name: "Vijaya Lakshmi Agrahapu",
-            role: "Associate Engineer",
-            title: "Living My Dream Mome...",
-            thumbnail: "https://img.youtube.com/vi/fpPwEFB86d4/maxresdefault.jpg", // Simplified thumb
-            videoUrl: "https://www.youtube.com/watch?v=fpPwEFB86d4"
+            name: "NxtWave Learner",
+            role: "Software Engineer",
+            title: "My Transformation with NxtWave",
+            thumbnail: "https://img.youtube.com/vi/KGKJgq7sBfU/maxresdefault.jpg",
+            videoUrl: "https://youtu.be/KGKJgq7sBfU"
         },
         {
-            name: "Leela Prasanthi Karri",
+            name: "NxtWave Learner",
             role: "Associate Engineer",
-            title: "NxtWave Helped Me to...",
-            thumbnail: "https://img.youtube.com/vi/8fFk1c7iT2k/maxresdefault.jpg",
-            videoUrl: "https://www.youtube.com/watch?v=8fFk1c7iT2k"
+            title: "Achieving My Career Goals",
+            thumbnail: "https://img.youtube.com/vi/m_LshX1kT_s/maxresdefault.jpg",
+            videoUrl: "https://youtu.be/m_LshX1kT_s"
         },
         {
-            name: "Rahul S.",
+            name: "NxtWave Learner",
             role: "Full Stack Developer",
-            title: "NxtWave's Guidance Le...",
-            thumbnail: "https://img.youtube.com/vi/fpPwEFB86d4/maxresdefault.jpg", // Mocking another thumb
-            videoUrl: "https://www.youtube.com/watch?v=fpPwEFB86d4"
+            title: "From Zero to Hero in Tech",
+            thumbnail: "https://img.youtube.com/vi/ET9KDQo3BQ0/maxresdefault.jpg",
+            videoUrl: "https://youtu.be/ET9KDQo3BQ0"
         }
     ];
 
     return (
         <section className="py-20 bg-slate-50 overflow-hidden">
             <div className="max-w-[1200px] mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-[#183b56] text-center mb-12">
+                <h2 className="text-3xl md:text-5xl font-large text-[#183b56] text-left mb-12">
                     Hear NxtWave learners' experiences
                 </h2>
 
@@ -63,18 +64,13 @@ const LearnerExperiences = () => {
                                     </div>
                                     {/* Overlay titles to match screenshot */}
                                     <div className="absolute top-4 left-4 right-4 flex justify-between items-start pointer-events-none">
-                                        <div className="bg-white/90 backdrop-blur rounded p-1">
-                                            <img src="https://assets.ccbp.in/frontend/react-js/nxt-wave-logo-img.png" alt="Logo" className="h-4" />
+                                        <div className="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                                            <img src={headerLogo} alt="Logo" className="h-12 w-12 object-contain" />
                                         </div>
-                                        <div className="bg-white/90 backdrop-blur px-2 py-1 rounded text-[10px] font-bold text-slate-800">
-                                            {exp.title}
-                                        </div>
+
                                     </div>
                                 </div>
-                                <div className="p-6">
-                                    <h3 className="font-bold text-[#183b56]">{exp.name}</h3>
-                                    <p className="text-sm text-slate-500">{exp.role}</p>
-                                </div>
+
                             </div>
                         ))}
                     </div>

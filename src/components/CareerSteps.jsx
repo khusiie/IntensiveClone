@@ -1,4 +1,8 @@
 import React from 'react';
+import clockIcon from '../assets/Third/image.png';
+import computerIcon from '../assets/Third/image copy.png';
+import booksIcon from '../assets/Third/image copy 2.png';
+import scrollIcon from '../assets/Third/image copy 3.png';
 
 const CareerSteps = () => {
     return (
@@ -46,16 +50,16 @@ const CareerSteps = () => {
 
                                 <div className="space-y-5 text-lg font-bold text-slate-500">
                                     <div className="flex items-center gap-3">
-                                        <span className="text-slate-400">🕒</span>
+                                        <img src={clockIcon} alt="" className="h-6 w-6 object-contain" />
                                         <p>Duration: <span className="text-[#183b56]">2 Months</span></p>
                                     </div>
-                                    <div className="flex items-center gap-3">
-                                        <span className="text-slate-400">💻</span>
+                                    <div className="flex items-center rounded-full gap-3">
+                                        <img src={computerIcon} alt="" className="h-6 w-6 object-contain " />
                                         <p>3 Hours Classes and 3 Hours Labs per day</p>
                                     </div>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
-                                            <span className="text-slate-400">📚</span>
+                                            <img src={booksIcon} alt="" className="h-6 w-6 object-contain" />
                                             <p>Courses Include</p>
                                         </div>
                                         <div className="flex flex-wrap gap-4">
@@ -73,7 +77,7 @@ const CareerSteps = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <span className="text-slate-400">📜</span>
+                                        <img src={scrollIcon} alt="" className="h-6 w-6 object-contain" />
                                         <p>Fundamentals Exam</p>
                                     </div>
                                 </div>
@@ -147,8 +151,10 @@ const CareerSteps = () => {
                                         }
                                     ].map((track, i) => (
                                         <div key={i} className="bg-white rounded-[24px] p-8 border border-slate-100 shadow-sm hover:shadow-lg transition-all border-l-4 border-l-[#7c3aed]">
-                                            <span className="text-[10px] font-black tracking-widest text-[#7c3aed] bg-[#7c3aed]/10 px-3 py-1 rounded-full">{track.option}</span>
-                                            <h4 className="text-2xl font-black text-[#183b56] mt-4 mb-6">{track.name}</h4>
+                                            <div className="flex justify-between items-start mb-6">
+                                                <span className="text-[10px] font-black tracking-widest text-[#7c3aed] bg-[#7c3aed]/10 px-3 py-1 rounded-full">{track.option}</span>
+                                            </div>
+                                            <h4 className="text-2xl font-black text-[#183b56] mb-6">{track.name}</h4>
 
                                             <div className="space-y-4 mb-10">
                                                 <div className="flex items-center gap-3 text-sm font-bold text-slate-500">

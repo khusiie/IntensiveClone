@@ -6,43 +6,53 @@ const TopCompaniesSection = () => {
     const testimonials = [
         {
             id: 1,
-            thumbnail: "https://assets.ccbp.in/frontend/react-js/nxt-wave-hire-sriram-natarajan-img.png",
+            thumbnail: "https://i.ytimg.com/vi/-U_YQ3W50nE/maxresdefault.jpg",
             title: "NxtWave Hire: Transfor...",
             speaker: "Sriram Natarajan",
             role: "Chief Executive Officer",
             company: "Kloudworx",
             highlight: "A GAME CHANGER IN RECRUITMENT",
-            youtubeId: "SgL_mE6-ySg"
+            youtubeId: "-U_YQ3W50nE"
         },
         {
             id: 2,
-            thumbnail: "https://assets.ccbp.in/frontend/react-js/nxt-wave-hire-gopal-parvathaneni-img.png",
+            thumbnail: "https://i.ytimg.com/vi_webp/91mJXAKrji0/sddefault.webp",
             title: "NxtWave Hire - We'll con...",
             speaker: "Gopal Parvathaneni",
             role: "Chairman and CEO",
             company: "EPSoft",
             highlight: "Our Hiring Game. Evolved",
-            youtubeId: "qY-0X3iH2nU"
+            youtubeId: "Y9aGu-fp1JA"
         },
         {
             id: 3,
-            thumbnail: "https://assets.ccbp.in/frontend/react-js/nxt-wave-hire-shilpa-chowdri-img.png",
+            thumbnail: "https://i.ytimg.com/vi_webp/66ZBOqaHyho/sddefault.webp",
             title: "NxtWave Hire - One Stop...",
             speaker: "Shilpa Chowdri",
             role: "HR Director",
             company: "Multiple Companies",
             highlight: "HIRING EXCEPTIONAL TALENT THROUGHOUT THE YEAR!",
-            youtubeId: "v8xXwX9v0pY"
+            youtubeId: "66ZBOqaHyho"
         },
         {
             id: 4,
-            thumbnail: "https://assets.ccbp.in/frontend/react-js/nxt-wave-hire-trained-aligned-img.png",
+            thumbnail: "https://i.ytimg.com/vi/X4YpCUk5FeQ/sddefault.jpg",
             title: "Trained & Aligned with Industry",
             speaker: "Recruiter Feedback",
             role: "Director - Talent Acquisition",
             company: "Tech Mahindra",
             highlight: "Industry Ready Talent",
-            youtubeId: "placeholder"
+            youtubeId: "X4YpCUk5FeQ"
+        },
+        {
+            id: 5,
+            thumbnail: "https://i.ytimg.com/vi/kSKFhkfq5hg/maxresdefault.jpg",
+            title: "NxtWave Hire - Recruiting...",
+            speaker: "Industry Experts",
+            role: "Talent Acquisition",
+            company: "Top Tech MNCs",
+            highlight: "Quality Candidates at Scale",
+            youtubeId: "kSKFhkfq5hg"
         }
     ];
 
@@ -51,13 +61,13 @@ const TopCompaniesSection = () => {
 
     return (
         <section className="py-24 bg-[#fafbfc] overflow-hidden" id="companies">
-            <div className="max-w-[1200px] mx-auto px-6">
+            <div className="max-w-[1800px] mx-auto px-6">
 
                 {/* Top Section: Heading & Main Video */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-[#183b56] leading-tight mb-6">
-                            Why Top Companies <span className="text-[#183b56]">Prefer</span> <br />
+                        <h2 className="text-4xl md:text-5xl font-bold text-[#183b56] leading-tight mb-6">
+                            Why <span className='text-blue-600'> Top Companies </span><span className="text-[#183b56]">Prefer </span>
                             <span className="text-blue-600">NxtWave Students</span>
                         </h2>
                         <p className="text-slate-500 text-lg md:text-xl leading-relaxed max-w-lg mb-8">
@@ -68,10 +78,10 @@ const TopCompaniesSection = () => {
                     <div className="relative group cursor-pointer">
                         <div className="relative rounded-[24px] overflow-hidden shadow-2xl border-4 border-white">
                             <img
-                                src="https://assets.ccbp.in/frontend/react-js/nxt-wave-celebrates-milestone-img.png"
+                                src="https://i.ytimg.com/vi_webp/-U_YQ3W50nE/maxresdefault.webp"
                                 alt="NxtWave Milestone"
                                 className="w-full h-auto transition-transform duration-700 group-hover:scale-105"
-                                onError={(e) => { e.target.src = 'https://i.ytimg.com/vi/SgL_mE6-ySg/maxresdefault.jpg' }}
+                                onError={(e) => { e.target.src = 'https://i.ytimg.com/vi/-U_YQ3W50nE/maxresdefault.jpg' }}
                             />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors flex items-center justify-center">
                                 <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110">
@@ -92,7 +102,7 @@ const TopCompaniesSection = () => {
                 {/* Bottom Section: Video Carousel */}
                 <div className="relative px-12">
                     <div className="flex transition-transform duration-500 ease-out gap-6 overflow-hidden">
-                        {testimonials.map((item, index) => (
+                        {testimonials.map((item) => (
                             <div
                                 key={item.id}
                                 className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] transition-all duration-300"
@@ -145,16 +155,14 @@ const TopCompaniesSection = () => {
                     <div className="flex flex-col items-center gap-8 w-full">
                         <div className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)] animate-pulse"></div>
-                            <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Batch starts today</span>
+                            <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Next batch starts on Feb 9th</span>
                         </div>
 
                         <div className="flex flex-wrap justify-center gap-6">
-                            <button className="bg-[#7c3aed] text-white px-12 py-4 rounded-2xl font-black text-lg shadow-[0_15px_30px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
-                                Enroll Now
-                            </button>
-                            <button className="border-2 border-slate-200 text-slate-800 px-10 py-4 rounded-2xl font-black text-lg hover:bg-slate-50 hover:border-slate-300 transition-all transform hover:-translate-y-1 shadow-sm">
+                            <button className="bg-[#7c3aed] text-white px-12 py-4 rounded-2xl font-bold text-lg shadow-[0_15px_30px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
                                 Book a Free Demo
                             </button>
+
                         </div>
                     </div>
                 </div>

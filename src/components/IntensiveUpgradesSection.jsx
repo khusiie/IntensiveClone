@@ -1,26 +1,30 @@
 import React from 'react';
+import liveIcon from '../assets/Fourth/image copy.png';
+import coachIcon from '../assets/Fourth/image copy 2.png';
+import managerIcon from '../assets/Fourth/image.png';
+import drivesIcon from '../assets/Fourth/image copy 3.png';
 
 const IntensiveUpgradesSection = () => {
     const features = [
         {
-            icon: 'https://assets.ccbp.in/frontend/react-js/live-session-icon-img.png',
+            icon: liveIcon,
             badge: 'LIVE',
             badgeColor: 'bg-orange-500',
             title: 'Live Sessions (Monday to Friday)',
             description: 'To learn coding best practices, get interview tips, discuss doubts and more from experts.'
         },
         {
-            icon: 'https://assets.ccbp.in/frontend/react-js/success-coach-icon-img.png',
+            icon: coachIcon,
             title: 'Dedicated Success Coach for Every Student',
             description: 'To guide you and ensure a smooth learning journey'
         },
         {
-            icon: 'https://assets.ccbp.in/frontend/react-js/placement-manager-icon-img.png',
+            icon: managerIcon,
             title: 'Placement Success Manager',
             description: 'To give feedback on your interview performance and boost your confidence'
         },
         {
-            icon: 'https://assets.ccbp.in/frontend/react-js/placement-drives-icon-img.png',
+            icon: drivesIcon,
             title: 'Mega Offline Placement Drives',
             description: 'Once in every 3 months'
         }
@@ -53,7 +57,7 @@ const IntensiveUpgradesSection = () => {
                 {/* Features Grid - 2 columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-14 mb-16">
                     {features.map((feature, i) => (
-                        <div key={i} className="flex items-start gap-5 group">
+                        <div key={i} className="flex items-start gap-3 group">
                             <div className="relative flex-shrink-0">
                                 <img
                                     src={feature.icon}

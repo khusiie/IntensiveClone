@@ -1,13 +1,10 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import TrustSection from './components/TrustSection';
-import StatsSection from './components/StatsSection';
 import CareerSteps from './components/CareerSteps';
 import RecognitionSlider from './components/RecognitionSlider';
 import PricingSection from './components/PricingSection';
 import FAQ from './components/FAQ';
-import LearnerExperiences from './components/LearnerExperiences';
 import MediaSection from './components/MediaSection';
 import WhyJoinSection from './components/WhyJoinSection';
 import CertificateSection from './components/CertificateSection';
@@ -29,11 +26,9 @@ function App() {
       <main>
         <Hero />
         <IntensiveUpgradesSection />
-        <TrustSection />
-        <StatsSection />
-        <CareerSteps />
         <TrainersAlumniSection />
         <SeniorsPlacedSection />
+        <CareerSteps />
         <DoubtClarification />
         <ProfessionalsGridSection />
         <CompanyLogosSlider />
@@ -43,7 +38,6 @@ function App() {
         <RecognitionSlider />
         <PricingSection />
         <FAQ />
-        <LearnerExperiences />
         <MediaSection />
       </main>
       <Footer />

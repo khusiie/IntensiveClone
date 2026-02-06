@@ -40,11 +40,11 @@ const SuccessStories = () => {
                 <h2 className="text-center text-4xl font-extrabold mb-16">
                     Real Stories of <span className="bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">Real Success</span>
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
                     {reviews.map((review, index) => (
                         <div key={index} className="glass-card flex flex-col justify-between p-10">
                             <p className="text-lg italic text-slate-700 leading-relaxed mb-8">"{review.text}"</p>
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-full bg-slate-100 border-2 border-primary"></div>
                                 <div>
                                     <div className="font-bold text-slate-900">{review.name}</div>

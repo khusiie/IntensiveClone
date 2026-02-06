@@ -1,11 +1,15 @@
 import React from 'react';
+import certificateImage from '../assets/certified/image.png';
+import icon1 from '../assets/certified/image copy.png';
+import icon2 from '../assets/certified/image copy 2.png';
+import icon3 from '../assets/certified/image copy 3.png';
 
 const CertificateSection = () => {
     const features = [
         {
             icon: (
-                <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center p-3">
-                    <img src="https://assets.ccbp.in/frontend/react-js/irc-icon-img.png" alt="IRC" className="w-full" onError={(e) => { e.target.src = 'https://img.icons8.com/color/96/certificate.png' }} />
+                <div className="w-12 h-12 bg-[#F1F5F9] rounded-2xl flex items-center justify-center p-2">
+                    <img src={icon1} alt="IRC" className="w-7 h-7 object-contain" />
                 </div>
             ),
             title: "Industry-Ready Certification [IRC]",
@@ -13,8 +17,8 @@ const CertificateSection = () => {
         },
         {
             icon: (
-                <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center p-3 font-bold text-orange-500">
-                    <svg className="w-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg>
+                <div className="w-16 h-16 bg-[#F1F5F9] rounded-2xl flex items-center justify-center p-2">
+                    <img src={icon2} alt="Shareable" className="w-10 h-10 object-contain" />
                 </div>
             ),
             title: "Shareable, Credible and Official",
@@ -22,8 +26,8 @@ const CertificateSection = () => {
         },
         {
             icon: (
-                <div className="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center p-3">
-                    <svg className="w-full text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /><path d="M11 8v6" /><path d="M8 11h6" /></svg>
+                <div className="w-16 h-16 bg-[#F1F5F9] rounded-2xl flex items-center justify-center p-2">
+                    <img src={icon3} alt="Compete" className="w-10 h-10 object-contain" />
                 </div>
             ),
             title: "Let companies compete for you",
@@ -38,7 +42,7 @@ const CertificateSection = () => {
                 {/* Left Column: Details */}
                 <div className="flex flex-col gap-8">
                     <div>
-                        <h2 className="text-4xl font-extrabold text-[#183b56] mb-4 relative inline-block">
+                        <h2 className="text-5xl font-bold text-[#183b56] mb-4 relative inline-block">
                             Get Certified
                             <div className="absolute -bottom-1 left-0 w-full h-[3px] bg-[#7c3aed] rounded-full"></div>
                         </h2>
@@ -49,7 +53,7 @@ const CertificateSection = () => {
 
                     <div className="flex flex-col gap-10 mt-4">
                         {features.map((feature, index) => (
-                            <div key={index} className="flex gap-6 group">
+                            <div key={index} className="flex gap-3 group">
                                 <div className="flex-shrink-0 transition-transform group-hover:scale-110">
                                     {feature.icon}
                                 </div>
@@ -64,18 +68,17 @@ const CertificateSection = () => {
                     </div>
 
                     <div className="flex flex-col gap-8 mt-4">
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-left gap-2">
                             <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)] animate-pulse"></div>
-                            <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Batch starts today</span>
+                            <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">
+                                Next batch starts on Feb 9th</span>
                         </div>
 
                         <div className="flex flex-wrap gap-4">
                             <button className="bg-[#7c3aed] text-white px-10 py-3.5 rounded-xl font-bold text-base shadow-[0_8px_20px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
-                                Enroll Now
-                            </button>
-                            <button className="border-2 border-[#7c3aed] text-[#7c3aed] px-8 py-3.5 rounded-xl font-bold text-base hover:bg-slate-50 transition-all transform hover:-translate-y-1">
                                 Book a Free Demo
                             </button>
+
                         </div>
                     </div>
                 </div>
@@ -84,10 +87,9 @@ const CertificateSection = () => {
                 <div className="relative">
                     <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] bg-white p-2 border border-slate-100 group">
                         <img
-                            src="https://assets.ccbp.in/frontend/react-js/intensive-learning-certificate-img.png"
+                            src={certificateImage}
                             alt="NxtWave Certificate"
-                            className="w-full h-auto rounded-2xl transform transition-transform duration-700 group-hover:scale-[1.02]"
-                            onError={(e) => { e.target.src = 'https://assets.ccbp.in/frontend/react-js/certified-img.png' }}
+                            className="w-full h-auto rounded-xl transform transition-transform duration-700 group-hover:scale-[1.02]"
                         />
                         {/* Decorative background elements */}
                         <div className="absolute -top-12 -right-12 w-64 h-64 bg-purple-100/50 rounded-full blur-3xl -z-10 animate-pulse"></div>

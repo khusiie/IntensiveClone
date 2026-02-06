@@ -1,4 +1,5 @@
-import React from 'react';
+import companiesIcon from '../assets/Professional/image.png';
+import packageIcon from '../assets/Professional/image copy.png';
 
 const ProfessionalsGridSection = () => {
     const professionals = [
@@ -21,29 +22,31 @@ const ProfessionalsGridSection = () => {
     const row3 = professionals.slice(8, 12);
 
     const ProfessionalCard = ({ prof }) => (
-        <div className="bg-white rounded-2xl p-5 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-slate-50 flex items-center gap-4 w-[320px] hover:shadow-lg transition-all duration-300 flex-shrink-0 group">
-            <div className="w-14 h-14 rounded-full overflow-hidden bg-slate-50 border border-slate-100 flex-shrink-0">
+        <div className="bg-white rounded-[20px] p-5 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100/50 flex items-center gap-4 w-[340px] hover:shadow-xl transition-all duration-300 flex-shrink-0 group">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-slate-50 border border-slate-100 flex-shrink-0">
                 <img
                     src={prof.image}
                     alt={prof.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     onError={(e) => { e.target.src = `https://ui-avatars.com/api/?name=${prof.name}&background=6366f1&color=fff&bold=true` }}
                 />
             </div>
             <div className="flex-grow min-w-0">
-                <h4 className="font-bold text-[#183b56] text-[15px] leading-tight truncate px-1">{prof.name}</h4>
-                <p className="text-[12px] text-slate-400 font-bold mb-2 truncate leading-tight px-1">{prof.role}</p>
-                <div className="h-5 flex items-center px-1">
+                <div className="mb-2">
+                    <h4 className="font-bold text-[#1e293b] text-[16px] leading-tight truncate">{prof.name}</h4>
+                    <p className="text-[13px] text-slate-500 font-medium truncate">{prof.role}</p>
+                </div>
+                <div className="h-6 flex items-center">
                     <img
                         src={prof.logo}
                         alt={prof.company}
-                        className="h-full object-contain max-w-[120px]"
+                        className="h-full object-contain max-w-[110px] filter grayscale group-hover:grayscale-0 transition-all duration-300"
                         onError={(e) => {
                             e.target.style.display = 'none';
                             e.target.nextSibling.style.display = 'block';
                         }}
                     />
-                    <span className="hidden text-[10px] font-black text-slate-400 uppercase tracking-tight">{prof.company}</span>
+                    <span className="hidden text-[11px] font-black text-slate-400 uppercase tracking-tight">{prof.company}</span>
                 </div>
             </div>
         </div>
@@ -69,48 +72,42 @@ const ProfessionalsGridSection = () => {
                 {/* Left Column: Title & Stats */}
                 <div className="flex flex-col gap-10 lg:pl-10">
                     <div>
-                        <h2 className="text-4xl md:text-[52px] font-extrabold text-[#183b56] leading-[1.1] mb-12">
+                        <h2 className="text-4xl md:text-[56px] font-bold text-[#334155] leading-[1.1] mb-12 tracking-tight">
                             Trusted by <span className="relative inline-block">
                                 Thousands
-                                <div className="absolute -bottom-1.5 left-0 w-full h-[3.5px] bg-[#7c3aed] rounded-full opacity-60"></div>
-                            </span> to <br />
-                            Become IT Professionals
+                                <svg className="absolute -bottom-2 left-0 w-full h-2 text-[#7c3aed] opacity-60" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" strokeLinecap="round" />
+                                </svg>
+                            </span> to Become IT Professionals
                         </h2>
 
                         <div className="space-y-12">
                             <div className="flex items-center gap-6">
-                                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md p-3.5 border border-slate-100">
-                                    <img src="https://assets.ccbp.in/frontend/react-js/companies-hired-icon-img.png" alt="Companies" className="w-full h-full object-contain" />
-                                </div>
+                                <img src={companiesIcon} alt="Companies" className="h-16 md:h-20 w-auto object-contain" />
                                 <div>
-                                    <p className="text-2xl font-black text-blue-600 leading-none mb-1.5">2000+ Companies</p>
-                                    <p className="text-[15px] font-bold text-slate-500 tracking-tight">Hired NxtWave Learners</p>
+                                    <p className="text-3xl font-bold text-[#2563eb] leading-none mb-2">2000+ Companies</p>
+                                    <p className="text-[16px] font-medium text-slate-500">Hired NxtWave Learners</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-6">
-                                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-md p-3.5 border border-slate-100">
-                                    <img src="https://assets.ccbp.in/frontend/react-js/highest-package-icon-img.png" alt="Package" className="w-full h-full object-contain" />
-                                </div>
+                                <img src={packageIcon} alt="Package" className="h-16 md:h-20 w-auto object-contain" />
                                 <div>
-                                    <p className="text-2xl font-black text-blue-600 leading-none mb-1.5">₹38 LPA</p>
-                                    <p className="text-[15px] font-bold text-slate-500 tracking-tight">Highest package</p>
+                                    <p className="text-3xl font-bold text-[#2563eb] leading-none mb-2">₹38 LPA</p>
+                                    <p className="text-[16px] font-medium text-slate-500">Highest package</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col gap-10 mt-8">
-                        <div className="flex items-center gap-2.5">
-                            <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)] animate-pulse"></div>
-                            <span className="text-[12px] font-bold text-slate-400 uppercase tracking-widest">Batch starts today</span>
+                        <div className="flex items-center gap-3">
+                            <div className="w-3.5 h-3.5 rounded-full bg-blue-600 shadow-[0_0_12px_rgba(37,99,235,0.4)]"></div>
+                            <span className="text-[17px] font-medium text-slate-600">Next batch starts on Feb 9th</span>
                         </div>
 
                         <div className="flex flex-wrap gap-5">
-                            <button className="bg-[#7c3aed] text-white px-12 py-3.5 rounded-xl font-black text-[17px] shadow-[0_12px_30px_-8px_rgba(124,58,237,0.5)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1.5 active:scale-95">
-                                Enroll Now
-                            </button>
-                            <button className="border-2 border-[#7c3aed] text-[#7c3aed] bg-white px-10 py-3.5 rounded-xl font-black text-[17px] hover:bg-slate-50 transition-all transform hover:-translate-y-1.5 active:scale-95">
+                            <button className="bg-[#7c3aed] text-white px-12 py-4 rounded-xl font-bold text-[18px] shadow-[0_8px_30px_-8px_rgba(124,58,237,0.5)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1 active:scale-95">
                                 Book a Free Demo
                             </button>
                         </div>

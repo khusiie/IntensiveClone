@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import senior1 from '../assets/senior/image.png';
+import senior2 from '../assets/senior/image copy.png';
+import senior3 from '../assets/senior/image copy 2.png';
+import companyLogo1 from '../assets/senior/campany/image.png';
+import companyLogo2 from '../assets/senior/campany/image copy.png';
+import companyLogo3 from '../assets/senior/campany/image copy 2.png';
 
 const SeniorsPlacedSection = () => {
     const [activeFilter, setActiveFilter] = useState('All');
@@ -17,24 +23,24 @@ const SeniorsPlacedSection = () => {
             name: 'Bairy Vishnu Vardhan',
             date: "Placed in Oct'26",
             company: 'LTI Mindtree',
-            logo: 'https://assets.ccbp.in/frontend/react-js/companies-mindtree-img.png',
-            avatar: 'https://assets.ccbp.in/frontend/react-js/professionals-3-img.png',
+            logo: companyLogo1,
+            avatar: senior1,
             text: "Thrilled to share that I've started my career as a Graduate Engineer Trainee at LTI Mindtree! Grateful to NxtWave for the mentorship, mock interviews, and guidance that made this possible.",
             linkedIn: true
         },
         {
             name: 'Kulkarni Rohith Kumar',
             date: "Placed in Jan'26",
-            logo: 'https://assets.ccbp.in/frontend/react-js/companies-accenture-img.png',
-            avatar: 'https://assets.ccbp.in/frontend/react-js/professionals-4-img.png',
+            logo: companyLogo2,
+            avatar: senior2,
             text: "I didn't expect to move into tech after so long, but here I am. Learning through NxtWave made this transition feel possible.",
             linkedIn: true
         },
         {
             name: 'Sai Ram Polisetty',
             date: "Placed in Jan'26",
-            logo: 'https://assets.ccbp.in/frontend/react-js/companies-accenture-img.png',
-            avatar: 'https://assets.ccbp.in/frontend/react-js/professionals-2-img.png',
+            logo: companyLogo3,
+            avatar: senior3,
             text: "I focused on building real skills instead of worrying about outcomes. Getting selected through NxtWave feels like a strong start for me.",
             linkedIn: true
         }
@@ -46,7 +52,7 @@ const SeniorsPlacedSection = () => {
 
                 {/* Heading Area */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-[52px] font-black text-[#183b56] leading-tight inline-block relative">
+                    <h2 className="text-4xl md:text-[52px] font-bold text-[#183b56] leading-tight inline-block relative">
                         Your Seniors Got Placed. It's <span className="relative inline-block">
                             Your Turn Now!
                             <div className="absolute -bottom-1.5 left-0 w-full h-[3.5px] bg-[#7c3aed] rounded-full opacity-60"></div>
@@ -61,8 +67,8 @@ const SeniorsPlacedSection = () => {
                             key={filter}
                             onClick={() => setActiveFilter(filter)}
                             className={`px-5 py-2 rounded-full text-[13.5px] font-bold transition-all border ${activeFilter === filter
-                                    ? 'bg-[#2563eb] text-white border-[#2563eb] shadow-md'
-                                    : 'bg-white text-slate-500 border-slate-300 hover:border-[#2563eb]'
+                                ? 'bg-[#2563eb] text-white border-[#2563eb] shadow-md'
+                                : 'bg-white text-slate-500 border-slate-300 hover:border-[#2563eb]'
                                 }`}
                         >
                             {filter}

@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
+import durationIcon from '../assets/Third/image.png';
+import eligibilityIcon from '../assets/Third/image copy 2.png';
+import onlineIcon from '../assets/Third/image copy.png';
+import supportIcon from '../assets/Third/image copy 3.png';
 
 const Hero = () => {
+
     const bottomFeatures = [
-        { icon: '⏳', label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
-        { icon: '📋', label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
-        { icon: '💻', label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
-        { icon: '🎯', label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors' }
+        { icon: durationIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
+        { icon: eligibilityIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
+        { icon: onlineIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
+        {
+            icon: supportIcon, label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors'
+        }
     ];
 
     const [showErrors, setShowErrors] = useState(false);
+    const roles = ["Software Engineer", "Data Engineer", "Full Stack Developer", "Data Analyst", "QA Engineer", "Software Developer", "NxtWave Learner"];
+    const displayRoles = [...roles, ...roles]; // Duplicate for seamless infinite scroll
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -16,36 +25,46 @@ const Hero = () => {
     };
 
     return (
-        <section className="relative bg-white overflow-hidden" id="hero">
+        <section className="relative bg-white overflow-hidden" id="hero" >
             {/* Announcement Bar with Confetti */}
-            <div className="bg-[#1e293b] py-4 relative overflow-hidden">
-                <div className="flex justify-center items-center gap-4 lg:gap-6 px-4">
-                    {/* Left Confetti */}
+            <div className="bg-[#030712] py-1 relative overflow-hidden">
+                <div className="flex justify-center items-center gap-0 px-4">
+                    {/* Left Fireworks */}
                     <img
                         src="/src/assets/image copy.png"
                         alt=""
-                        className="w-[120px] lg:w-[150px] opacity-90 pointer-events-none hidden lg:block flex-shrink-0"
+                        className="h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain -mr-3 md:-mr-6"
                     />
 
                     {/* Text Content */}
-                    <div className="text-[#d9f99d] text-lg font-normal text-center relative z-10 flex items-center justify-center">
-                        <div className="flex items-center flex-wrap justify-center gap-2">
-                            <img src="/src/assets/image copy 2.png" alt="" className="inline-block w-6 h-6" />
-                            <span>NxtWave Intensive Offline Center is starting in Hyderabad.</span>
-                            <a href="#" className="text-white text-sm font-normal hover:underline inline-flex items-center gpx-3 py-1 whitespace-nowrap">
-                                Check it Out
-                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
+                    <div className="flex items-center gap-1 relative z-10 transition-all duration-300">
+                        {/* Party Popper Emoji/Icon */}
+                        <img src="/src/assets/image copy 2.png" alt="🎉" className="w-5 h-5 md:w-6 md:h-6 animate-bounce" />
+
+                        <div className="flex items-center flex-nowrap font-medium tracking-tight whitespace-nowrap">
+                            <span className="text-[#bef264] text-[14px] md:text-[17px]">
+                                NxtWave Intensive Offline Center is starting in Hyderabad.
+                            </span>
+                            <a href="#" className="text-white text-[13px] md:text-[16px] hover:underline flex items-center gap-1.5 ml-3 md:ml-4 group whitespace-nowrap">
+                                Check It Out
+                                <svg
+                                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2.5"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                                 </svg>
                             </a>
                         </div>
                     </div>
 
-                    {/* Right Confetti */}
+                    {/* Right Fireworks */}
                     <img
                         src="/src/assets/image copy.png"
                         alt=""
-                        className="w-[120px] lg:w-[150px] opacity-90 pointer-events-none hidden lg:block transform scale-x-[-1] flex-shrink-0"
+                        className="h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain transform scale-x-[-1] -ml-3 md:-ml-6"
                     />
                 </div>
             </div>
@@ -53,7 +72,7 @@ const Hero = () => {
 
 
             {/* Main Hero Content */}
-            <div className="relative min-h-[600px]">
+            <div className="relative min-h-[500px]">
 
                 {/* Curved Teal Background */}
                 <div className="absolute right-0 top-0 w-[55%] h-full bg-gradient-to-br from-[#2dd4bf] to-[#14b8a6] rounded-bl-[100px] -z-10"></div>
@@ -61,10 +80,10 @@ const Hero = () => {
                 {/* Dark decorative strip on extreme right */}
                 <div className="absolute right-0 top-0 w-[60px] h-full bg-[#0f172a] -z-20"></div>
 
-                <div className="max-w-[1300px] mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
+                <div className="max-w-[1300px] mx-auto px-6 py-4 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
 
                     {/* Left Content */}
-                    <div className="space-y-10 z-10">
+                    <div className="space-y-6 z-10">
                         {/* NEW Badge Section */}
                         <div className="inline-flex items-center gap-3 border border-slate-200 rounded-full px-2 py-1 pr-4 shadow-sm bg-white">
                             <span className="bg-[#f97316] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">NEW</span>
@@ -73,10 +92,23 @@ const Hero = () => {
 
                         {/* Main Headline */}
                         <div className="text-center md:text-left">
-                            <h1 className="text-[44px] md:text-[54px] font-medium text-[#1e293b] leading-[1.1] mb-4">
+                            <h1 className="text-[44px] md:text-[54px] font-medium text-[#1e293b] leading-[1.1] mb-4 tracking-wide">
                                 A Proven Program<br />
                                 To Make You a<br />
-                                <span className="text-[#f97316]">Full Stack Developer</span>
+                                <div className="relative h-[70px] md:h-[90px] overflow-hidden">
+                                    <div className="animate-vertical-marquee flex flex-col">
+                                        {displayRoles.map((role, index) => (
+                                            <div key={index} className="h-[70px] md:h-[90px] flex items-center">
+                                                <span className="text-[#f97316] drop-shadow-sm whitespace-nowrap">{role}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                    <div className="absolute bottom-0 left-0 w-full pointer-events-none">
+                                        <svg viewBox="0 0 100 10" preserveAspectRatio="none" className="w-full h-3">
+                                            <path d="M0 5 Q 25 10, 50 5 T 100 5" stroke="#7c3aed" strokeWidth="1.5" fill="transparent" strokeLinecap="round" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </h1>
                         </div>
 
@@ -199,7 +231,7 @@ const Hero = () => {
                         <p className="text-center text-xs text-slate-400 mt-6">Product of <span className="font-black text-[#183b56]">NXT</span><span className="font-black text-[#f97316]">WAVE</span></p>
                     </div>
                 </div>
-            </div>
+            </div >
 
             {/* Bottom Feature Bar */}
             <div className="bg-[#0f172a] py-8">
@@ -207,7 +239,7 @@ const Hero = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {bottomFeatures.map((feat, i) => (
                             <div key={i} className="flex items-start gap-4">
-                                <div className="text-3xl flex-shrink-0">{feat.icon}</div>
+                                <img src={feat.icon} alt="" className="w-8 h-8 object-contain flex-shrink-0" />
                                 <div>
                                     <div className="flex items-center gap-2 mb-1.5">
                                         <p className="text-white font-bold text-sm">{feat.label}</p>
@@ -220,7 +252,18 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </section>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                @keyframes vertical-marquee {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-50%); }
+                }
+                .animate-vertical-marquee {
+                    animation: vertical-marquee 40s linear infinite;
+                }
+            `}} />
+        </section >
     );
 };
 

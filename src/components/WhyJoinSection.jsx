@@ -1,4 +1,6 @@
 import React from 'react';
+import nsdcLogo from '../assets/join/image.png';
+import nasscomLogo from '../assets/join/image copy.png';
 
 const WhyJoinSection = () => {
     const comparisonData = [
@@ -34,12 +36,12 @@ const WhyJoinSection = () => {
                     <p className="text-xs text-slate-500 font-medium">Recognized by</p>
                     <div className="flex items-center gap-4">
                         <img
-                            src="https://assets.ccbp.in/frontend/react-js/recognized-by-nsdc-img.png"
+                            src={nsdcLogo}
                             alt="NSDC"
                             className="h-6 object-contain"
                         />
                         <img
-                            src="https://assets.ccbp.in/frontend/react-js/recognized-by-nasscom-img.png"
+                            src={nasscomLogo}
                             alt="NASSCOM"
                             className="h-4 object-contain"
                         />
@@ -113,7 +115,7 @@ const WhyJoinSection = () => {
     return (
         <section className="py-20 bg-white overflow-hidden scroll-mt-20" id="why-intensive">
             <div className="max-w-[1200px] mx-auto px-4">
-                <h2 className="text-3xl md:text-4xl font-extrabold text-[#183b56] mb-12 text-center md:text-left">
+                <h2 className="text-3xl md:text-5xl font-bold text-[#183b56] mb-12 text-center md:text-left">
                     Why Join Intensive?
                 </h2>
 
@@ -158,20 +160,18 @@ const WhyJoinSection = () => {
                 </div>
 
                 {/* Footer Component inside WhyJoinSection */}
-                <div className="flex flex-col items-center mt-12 gap-10">
-                    <div className="flex flex-col items-center gap-8 w-full">
+                <div className="flex flex-col items-left mt-12 gap-10">
+                    <div className="flex flex-col items-left gap-8 w-full">
                         <div className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.5)] animate-pulse"></div>
-                            <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Batch starts today</span>
+                            <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Next batch starts on Feb 9th</span>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-6">
-                            <button className="bg-[#7c3aed] text-white px-12 py-4 rounded-2xl font-black text-lg shadow-[0_15px_30px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
-                                Enroll Now
-                            </button>
-                            <button className="border-2 border-slate-200 text-slate-800 px-10 py-4 rounded-2xl font-black text-lg hover:bg-slate-50 hover:border-slate-300 transition-all transform hover:-translate-y-1 shadow-sm">
+                        <div className="flex flex-wrap justify-left gap-6">
+                            <button className="bg-[#7c3aed] text-white px-6 py-2 rounded-2xl font-medium text-md shadow-[0_15px_30px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
                                 Book a Free Demo
                             </button>
+
                         </div>
                     </div>
                 </div>
