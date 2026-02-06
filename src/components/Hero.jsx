@@ -9,47 +9,47 @@ import testimonial2 from '../assets/Hero/image copy.png';
 import testimonial3 from '../assets/Hero/image copy 2.png';
 import testimonial4 from '../assets/Hero/image copy 3.png';
 
+const bottomFeatures = [
+    { icon: onlineIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
+    { icon: durationIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
+    { icon: eligibilityIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
+    {
+        icon: supportIcon, label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors'
+    }
+];
+
+const testimonials = [
+    {
+        text: "From being a Delivery Boy in Swiggy to Programmer Analyst in an MNC!",
+        name: "Venkat Sai",
+        education: "Mechanical Engineering",
+        image: testimonial1,
+        companyLogo: "https://assets.ccbp.in/frontend/react-js/companies-exl-img.png"
+    },
+    {
+        text: "Non-IT to IT: Started my career as a Software Engineer at 4.5 LPA",
+        name: "Maddineni Bhargava",
+        education: "Civil Engineering",
+        image: testimonial2,
+        companyLogo: "https://assets.ccbp.in/frontend/react-js/professionals-microsoft-img.png"
+    },
+    {
+        text: "Gap of 3 years to settling in a high-paying software job",
+        name: "Manvendra Shah",
+        education: "B.Sc Computer Science",
+        image: testimonial3,
+        companyLogo: "https://assets.ccbp.in/frontend/react-js/professionals-aha-img.png"
+    },
+    {
+        text: "Mock interviews by the placement team helped me improve.",
+        name: "Bhargavi",
+        education: "CSE, JNTU",
+        image: testimonial4,
+        companyLogo: "https://assets.ccbp.in/frontend/react-js/companies-systech-img.png"
+    }
+];
+
 const Hero = () => {
-
-    const bottomFeatures = [
-        { icon: onlineIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
-        { icon: durationIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
-        { icon: eligibilityIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
-        {
-            icon: supportIcon, label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors'
-        }
-    ];
-
-    const testimonials = [
-        {
-            text: "From being a Delivery Boy in Swiggy to Programmer Analyst in an MNC!",
-            name: "Venkat Sai",
-            education: "Mechanical Engineering",
-            image: testimonial1,
-            companyLogo: "https://assets.ccbp.in/frontend/react-js/companies-exl-img.png"
-        },
-        {
-            text: "Non-IT to IT: Started my career as a Software Engineer at 4.5 LPA",
-            name: "Maddineni Bhargava",
-            education: "Civil Engineering",
-            image: testimonial2,
-            companyLogo: "https://assets.ccbp.in/frontend/react-js/professionals-microsoft-img.png"
-        },
-        {
-            text: "Gap of 3 years to settling in a high-paying software job",
-            name: "Manvendra Shah",
-            education: "B.Sc Computer Science",
-            image: testimonial3,
-            companyLogo: "https://assets.ccbp.in/frontend/react-js/professionals-aha-img.png"
-        },
-        {
-            text: "Mock interviews by the placement team helped me improve.",
-            name: "Bhargavi",
-            education: "CSE, JNTU",
-            image: testimonial4,
-            companyLogo: "https://assets.ccbp.in/frontend/react-js/companies-systech-img.png"
-        }
-    ];
 
     const [activeTestimonial, setActiveTestimonial] = useState(0);
 
@@ -59,7 +59,7 @@ const Hero = () => {
             setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
         }, 2857);
         return () => clearInterval(interval);
-    }, []);
+    }, [testimonials.length]);
 
     const [showErrors, setShowErrors] = useState(false);
     const roles = ["Software Engineer", "Data Engineer", "Full Stack Developer", "Data Analyst", "QA Engineer", "Software Developer", "NxtWave Learner"];

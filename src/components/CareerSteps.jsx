@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import fundamental1 from '../assets/fundamental/image.png';
-import fundamental2 from '../assets/fundamental/image copy.png';
-import fundamental3 from '../assets/fundamental/image copy 2.png';
+import fundamental1 from '../assets/Fundamental/image.png';
+import fundamental2 from '../assets/Fundamental/image copy.png';
+import fundamental3 from '../assets/Fundamental/image copy 2.png';
 import clockIcon from '../assets/Fundamental/steps/image.png';
 import computerIcon from '../assets/Fundamental/steps/image copy.png';
 import booksIcon from '../assets/Fundamental/steps/image copy 2.png';
