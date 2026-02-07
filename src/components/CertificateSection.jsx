@@ -8,8 +8,8 @@ const CertificateSection = () => {
     const features = [
         {
             icon: (
-                <div className="w-12 h-12 bg-[#F1F5F9] rounded-2xl flex items-center justify-center p-2">
-                    <img src={icon1} alt="IRC" className="w-7 h-7 object-contain" />
+                <div className="w-16 h-16 flex items-center justify-center">
+                    <img src={icon1} alt="IRC" className="w-full h-full object-contain" />
                 </div>
             ),
             title: "Industry-Ready Certification [IRC]",
@@ -17,8 +17,8 @@ const CertificateSection = () => {
         },
         {
             icon: (
-                <div className="w-16 h-16 bg-[#F1F5F9] rounded-2xl flex items-center justify-center p-2">
-                    <img src={icon2} alt="Shareable" className="w-10 h-10 object-contain" />
+                <div className="w-16 h-16 flex items-center justify-center">
+                    <img src={icon2} alt="Shareable" className="w-full h-full object-contain" />
                 </div>
             ),
             title: "Shareable, Credible and Official",
@@ -26,8 +26,8 @@ const CertificateSection = () => {
         },
         {
             icon: (
-                <div className="w-16 h-16 bg-[#F1F5F9] rounded-2xl flex items-center justify-center p-2">
-                    <img src={icon3} alt="Compete" className="w-10 h-10 object-contain" />
+                <div className="w-16 h-16 flex items-center justify-center">
+                    <img src={icon3} alt="Compete" className="w-full h-full object-contain" />
                 </div>
             ),
             title: "Let companies compete for you",
@@ -40,7 +40,7 @@ const CertificateSection = () => {
             <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Left Column: Details */}
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-10">
                     <div>
                         <h2 className="text-5xl font-bold text-[#183b56] mb-4 relative inline-block">
                             Get Certified
@@ -51,9 +51,9 @@ const CertificateSection = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-col gap-10 mt-4">
+                    <div className="flex flex-col gap-5 mt-4">
                         {features.map((feature, index) => (
-                            <div key={index} className="flex gap-3 group">
+                            <div key={index} className="flex gap-2 group items-start">
                                 <div className="flex-shrink-0 transition-transform group-hover:scale-110">
                                     {feature.icon}
                                 </div>

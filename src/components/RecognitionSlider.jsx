@@ -148,7 +148,7 @@ const RecognitionSlider = () => {
                         </div>
 
                         <div className="flex flex-wrap justify-center gap-6">
-                            <button className="bg-[#7c3aed] text-white px-12 py-4 rounded-2xl font-black text-lg shadow-[0_15px_30px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
+                            <button className="bg-[#7c3aed] text-white px-12 py-4 rounded-2xl font-bold text-lg shadow-[0_15px_30px_-5px_rgba(124,58,237,0.4)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
                                 Book a Free Demo
                             </button>
 
