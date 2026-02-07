@@ -147,6 +147,18 @@ const Hero = () => {
                 {/* Dark decorative strip on extreme right */}
                 <div className="hidden md:block absolute right-0 top-0 w-[60px] h-full bg-[#0f172a] -z-20"></div>
 
+                {/* Background Decoration Image at Bottom */}
+                <div
+                    className="hidden md:block absolute left-0 right-0 bottom-0 h-[400px] pointer-events-none bg-no-repeat bg-bottom bg-right"
+                    style={{
+                        backgroundImage: 'url(https://cdn.prod.website-files.com/5fa61cbbf0d432b3230f62b1/63bd0ef0158ffc50087d92fc_1366-embed-form-bg-image.avif)',
+                        backgroundSize: 'contain',
+                        zIndex: 5,
+                        opacity: 0.8
+                    }}
+                >
+                </div>
+
                 <div className="max-w-[1300px] mx-auto px-6 pt-4 pb-16 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
 
                     {/* Left Content */}
@@ -212,15 +224,8 @@ const Hero = () => {
 
                     {/* Right Side - Form + Character */}
                     <div className="relative z-10">
-                        {/* Background Decoration */}
-                        <div
-                            className="absolute -left-64 -top-32 -right-32 -bottom-32 z-0 pointer-events-none hidden lg:block bg-contain bg-no-repeat bg-center opacity-80"
-                            style={{ backgroundImage: 'url(https://cdn.prod.website-files.com/5fa61cb5ed3ef7885b51d960/63bd0ef393f9c62c3e498308_1366-embed-form-bg-image.avif)' }}
-                        >
-                        </div>
-
                         {/* Demo Form Card */}
-                        <div className="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] p-10 relative z-10 mx-auto lg:ml-auto lg:mr-8 max-w-[480px] lg:-mt-14 max-h-[88vh] overflow-y-auto custom-scrollbar">
+                        <div className="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] p-10 relative z-20 mx-auto lg:ml-auto lg:mr-8 max-w-[480px] lg:-mt-14 max-h-[88vh] overflow-y-auto custom-scrollbar">
                             <div className="flex justify-between items-start mb-6">
                                 <div>
                                     <h3 className="text-[28px] leading-tight font-bold text-[#0f172a] mb-1">Book a Live Demo</h3>
@@ -297,7 +302,7 @@ const Hero = () => {
 
 
                         </div>
-                        <p className="text-center text-xs text-slate-400 mt-6">Product of <span className="font-black text-[#183b56]">NXT</span><span className="font-black text-[#f97316]">WAVE</span></p>
+                        <p className="text-center text-xs text-white mt-6">Product of <span className="font-black text-white">NXT</span><span className="font-black text-white">WAVE</span></p>
                     </div>
                 </div>
             </div >
