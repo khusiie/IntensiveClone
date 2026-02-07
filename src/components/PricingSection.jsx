@@ -246,10 +246,10 @@ const PricingSection = () => {
                     </div>
 
                     <div className="flex flex-wrap justify-left gap-6">
-                        <button className="bg-[#7c3aed] text-white px-12 py-3 rounded-xl font-bold shadow-lg shadow-purple-200 hover:bg-[#6d28d9] transition-all">
+                        <button className="bg-[#7c3aed] text-white px-12 py-3 rounded-xl font-medium shadow-lg shadow-purple-200 hover:bg-[#6d28d9] transition-all">
                             Book a Free Demo
                         </button>
-                        <button className="border-2 border-primary text-primary px-10 py-3 rounded-xl font-bold hover:bg-primary/5 transition-all">
+                        <button className="border-2 border-primary text-primary px-10 py-3 rounded-xl font-medium transition-all">
                             Book Your Seat for 2000/-
                         </button>
                     </div>

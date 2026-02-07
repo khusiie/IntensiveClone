@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import durationIcon from '../assets/Third/image.png';
 import eligibilityIcon from '../assets/Third/image copy 2.png';
 import onlineIcon from '../assets/Third/image copy.png';
@@ -65,6 +65,27 @@ const Hero = () => {
     const roles = ["Software Engineer", "Data Engineer", "Full Stack Developer", "Data Analyst", "QA Engineer", "Software Developer", "NxtWave Learner"];
     const displayRoles = [...roles, ...roles]; // Duplicate for seamless infinite scroll
 
+    const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(true);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentRoleIndex((prev) => prev + 1);
+            setIsTransitioning(true);
+        }, 2000); // 2s pause
+        return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        if (currentRoleIndex === roles.length) {
+            const timeout = setTimeout(() => {
+                setIsTransitioning(false);
+                setCurrentRoleIndex(0);
+            }, 500); // Match transition duration
+            return () => clearTimeout(timeout);
+        }
+    }, [currentRoleIndex, roles.length]);
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setShowErrors(true);
@@ -126,14 +147,14 @@ const Hero = () => {
                 {/* Dark decorative strip on extreme right */}
                 <div className="hidden md:block absolute right-0 top-0 w-[60px] h-full bg-[#0f172a] -z-20"></div>
 
-                <div className="max-w-[1300px] mx-auto px-6 py-4 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
+                <div className="max-w-[1300px] mx-auto px-6 pt-4 pb-16 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
 
                     {/* Left Content */}
                     <div className="space-y-6 z-10">
                         {/* NEW Badge Section */}
-                        <div className="inline-flex items-center gap-3 border border-slate-200 rounded-full px-2 py-1 pr-4 shadow-sm bg-white">
-                            <span className="bg-[#f97316] text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">NEW</span>
-                            <span className="text-slate-600 font-bold text-sm">Intensive 3.0 to 3x your placement chances</span>
+                        <div className="inline-flex items-center gap-3 border border-slate-200 rounded-full px-3 py-2 pr-6 shadow-sm bg-white">
+                            <span className="bg-[#f97316] text-white text-xs font-medium px-3 py-1 rounded-full uppercase tracking-wider">NEW</span>
+                            <span className="text-slate-600 font-medium text-base">Intensive 3.0 to 3x your placement chances</span>
                         </div>
 
                         {/* Main Headline */}
@@ -142,7 +163,13 @@ const Hero = () => {
                                 A Proven Program<br />
                                 To Make You a<br />
                                 <div className="relative h-[48px] md:h-[64px] overflow-hidden inline-block align-bottom">
-                                    <div className="animate-vertical-marquee flex flex-col will-change-transform">
+                                    <div
+                                        className="flex flex-col will-change-transform"
+                                        style={{
+                                            transform: `translateY(-${(currentRoleIndex * 100) / displayRoles.length}%)`,
+                                            transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
+                                        }}
+                                    >
                                         {displayRoles.map((role, index) => (
                                             <div key={index} className="h-[48px] md:h-[64px] flex items-center">
                                                 <span className="text-[#ea580c] drop-shadow-sm whitespace-nowrap">{role}</span>
@@ -160,7 +187,7 @@ const Hero = () => {
 
                         {/* Testimonial Card */}
                         {/* Testimonial Image Only */}
-                        <div className="pt-8">
+                        <div className="pt-2">
                             <div className="w-full flex justify-center md:justify-start transition-all duration-500">
                                 <img
                                     src={testimonials[activeTestimonial].image}
@@ -193,11 +220,11 @@ const Hero = () => {
                         </div>
 
                         {/* Demo Form Card */}
-                        <div className="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] p-10 relative z-10 ml-auto max-w-[400px]">
+                        <div className="bg-white rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.15)] p-10 relative z-10 mx-auto lg:ml-auto lg:mr-8 max-w-[480px] lg:-mt-14 max-h-[88vh] overflow-y-auto custom-scrollbar">
                             <div className="flex justify-between items-start mb-6">
                                 <div>
-                                    <h3 className="text-[28px] leading-tight font-black text-[#0f172a] mb-1">Book a Live Demo</h3>
-                                    <h3 className="text-[28px] leading-tight font-black text-[#0f172a]">
+                                    <h3 className="text-[28px] leading-tight font-bold text-[#0f172a] mb-1">Book a Live Demo</h3>
+                                    <h3 className="text-[28px] leading-tight font-bold text-[#0f172a]">
                                         For <span className="relative inline-block">
                                             Free !
                                             <svg className="absolute -bottom-1.5 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
@@ -263,7 +290,7 @@ const Hero = () => {
                                     By proceeding further, I agree to the <a href="#" className="text-[#2563eb] underline">Terms & Conditions</a> and <a href="#" className="text-[#2563eb] underline">Privacy Policy</a> of NxtWave
                                 </p>
 
-                                <button type="submit" className="w-full bg-[#7c3aed] text-white py-4 rounded-xl font-black text-lg shadow-[0_10px_25px_-8px_rgba(249,115,22,0.5)] hover:bg-[#ea580c] transition-all transform hover:-translate-y-0.5">
+                                <button type="submit" className="w-full bg-[#7c3aed] text-white py-3 rounded-xl font-medium text-md shadow-[0_10px_25px_-8px_rgba(249,115,22,0.5)] transition-all transform hover:-translate-y-0.5">
                                     Book My Demo
                                 </button>
                             </form>
@@ -295,16 +322,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <style dangerouslySetInnerHTML={{
-                __html: `
-                @keyframes vertical-marquee {
-                    0% { transform: translateY(0); }
-                    100% { transform: translateY(-50%); }
-                }
-                .animate-vertical-marquee {
-                    animation: vertical-marquee 20s linear infinite;
-                }
-            `}} />
+
         </section >
     );
 };

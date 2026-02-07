@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
+// Force restart: Renamed assets require a fresh build context.
 export default defineConfig({
   plugins: [
     react(),

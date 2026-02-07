@@ -1,4 +1,4 @@
-import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
     return (
@@ -9,9 +9,7 @@ const WhatsAppButton = () => {
             className="fixed bottom-3 right-3 md:bottom-6 md:right-6 z-[50] bg-[#25d366] text-white px-4 py-2 md:px-5 md:py-2.5 rounded-full shadow-lg hover:bg-[#128c7e] transition-all flex items-center gap-2 group"
         >
             <span className="text-sm font-bold">Chat with us</span>
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.546 5.332-11.871 11.888-11.871 3.176 0 6.161 1.237 8.404 3.484 2.245 2.247 3.483 5.234 3.483 8.409 0 6.547-5.332 11.872-11.886 11.872-2.003 0-3.968-.507-5.717-1.472l-6.271 1.687zm13.123-14.773c-.221-.491-.355-.502-.52-.502-.128 0-.275-.001-.422-.001-.147 0-.386.055-.588.275-.202.22-.771.752-.771 1.833 0 1.082.789 2.128.899 2.274.11.147 1.552 2.37 3.759 3.325 1.848.799 2.224.64 2.628.604.404-.037 1.303-.532 1.487-1.045.183-.513.183-.953.128-1.045-.054-.091-.201-.147-.422-.257s-1.303-.642-1.505-.715-.348-.11-.495.11-.568.715-.697.862-.257.165-.477.055c-.22-.11-.929-.342-1.769-1.091-.653-.582-1.094-1.301-1.222-1.521-.128-.22-.014-.339.098-.448.1-.099.22-.257.33-.385.11-.128.147-.22.22-.366.073-.147.037-.275-.018-.385s-.52-1.25-.713-1.683z" />
-            </svg>
+            <FaWhatsapp className="w-6 h-6" />
             <div className="absolute top-[-4px] right-[-4px] w-3 h-3 bg-red-500 rounded-full border-2 border-white"></div>
         </a>
     );
