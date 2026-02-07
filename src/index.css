@@ -27,8 +27,14 @@
 }
 
 @layer base {
+
+  html,
   body {
-    @apply font-inter text-text-dark bg-white overflow-x-hidden leading-relaxed;
+    @apply overflow-x-hidden max-w-[100vw];
+  }
+
+  body {
+    @apply font-inter text-text-dark bg-white leading-relaxed;
   }
 
   h1,

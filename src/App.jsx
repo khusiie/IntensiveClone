@@ -22,7 +22,7 @@ import './index.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app overflow-x-hidden w-full max-w-full">
       <Navbar />
       <main>
         <Hero />

@@ -18,12 +18,12 @@ const Navbar = () => {
                 {/* Pink top accent line */}
                 <div className="h-1 bg-[#ec4899]"></div>
 
-                <div className="max-w-[1300px] mx-auto px-6">
-                    <div className="flex items-center justify-between h-[88px]">
+                <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
+                    <div className="flex items-center justify-between h-[64px] sm:h-[88px]">
 
                         {/* Logo */}
                         <a href="#" className="flex items-center">
-                            <img src={logoImage} alt="NxtWave Intensive" className="h-[52px] object-contain" />
+                            <img src={logoImage} alt="NxtWave Intensive" className="h-[36px] sm:h-[52px] object-contain" />
                         </a>
 
                         {/* Desktop Navigation */}
