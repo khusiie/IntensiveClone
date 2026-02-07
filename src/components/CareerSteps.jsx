@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import fundamental1 from '../assets/Fundamental/image.png';
 import fundamental2 from '../assets/Fundamental/image copy.png';
 import fundamental3 from '../assets/Fundamental/image copy 2.png';
@@ -19,6 +19,18 @@ import addon9 from '../assets/adds-on/image copy 9.png';
 import addon10 from '../assets/adds-on/image copy 10.png';
 import dashboardImg from '../assets/adds-on/image.png';
 
+import track1_1 from '../assets/jobtrack/image.png';
+import track1_2 from '../assets/jobtrack/image copy.png';
+import track1_3 from '../assets/jobtrack/image copy 2.png';
+import track1_4 from '../assets/jobtrack/image copy 3.png';
+import track2_1 from '../assets/jobtrack/image copy 4.png';
+import track2_2 from '../assets/jobtrack/image copy 5.png';
+import track2_3 from '../assets/jobtrack/image copy 6.png';
+import track3_1 from '../assets/jobtrack/image copy 7.png';
+import track4_1 from '../assets/jobtrack/image copy 8.png';
+import track4_2 from '../assets/jobtrack/image copy 9.png';
+import lockIcon from '../assets/jobtrack/lock/image.png';
+
 import htmlIcon from '../assets/Fundamental/course/image.png';
 import cssIcon from '../assets/Fundamental/course/image copy.png';
 import pythonIcon from '../assets/Fundamental/course/image copy 2.png';
@@ -27,6 +39,8 @@ import sqlIcon from '../assets/Fundamental/course/image copy 3.png';
 const CareerSteps = () => {
     const [activeSlide, setActiveSlide] = useState(0);
     const fundamentalSlides = [fundamental1, fundamental2, fundamental3];
+    const sectionRef = useRef(null);
+    const [lineHeight, setLineHeight] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -36,23 +50,64 @@ const CareerSteps = () => {
         return () => clearInterval(interval);
     }, [fundamentalSlides.length]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (sectionRef.current) {
+                const rect = sectionRef.current.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+                const offset = 200; // Start filling a bit earlier
+
+                // Calculate progress based on how much of the section is visible
+                // Determine start and end points relative to viewport
+                const start = rect.top - windowHeight + offset;
+                const end = rect.bottom - windowHeight;
+
+                // We want to map the scroll position to the height of the container
+                // When rect.top is near middle of screen, start increasing height
+
+                const elementTop = rect.top;
+                const totalHeight = rect.height;
+
+                // Calculate how far we've scrolled past the start of the element relative to viewport center
+                let scrolled = windowHeight / 2 - elementTop;
+
+                // Clamp functionality
+                let percentage = (scrolled / totalHeight) * 100;
+                percentage = Math.max(0, Math.min(percentage + 10, 100)); // Add a little buffer
+
+                setLineHeight(percentage);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        // Trigger once on mount
+        handleScroll();
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <section className="py-24 bg-white overflow-hidden" id="roadmap">
-            <div className="max-w-[1300px] mx-auto px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-[0.7fr_1.3fr] gap-16 relative">
+        <section className="py-24 bg-white" id="roadmap">
+            <div className="max-w-[1200px] mx-auto px-6">
+                <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 relative">
 
                     {/* Left Sticky Column */}
-                    <div className="lg:sticky lg:top-32 h-fit space-y-10">
+                    <div className="lg:sticky lg:top-32 self-start h-fit space-y-10">
                         <div>
-                            <h2 className="text-4xl md:text-[54px] font-bold text-[#183b56] leading-[1.1] mb-12">
+                            <h2 className="text-[32px] md:text-5xl font-bold text-[#183b56] leading-[1.25] tracking-wide mb-16 font-satoshi">
                                 Get Ready for Your <br />
-                                IT Career in <span className="text-[#183b56]">3 Steps</span>
+                                IT Career in <span className="relative inline-block">
+                                    3 Steps
+                                    <svg className="absolute -bottom-2 left-0 w-full h-3" viewBox="0 0 186 11" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                                        <path d="M2.00021 8.86C59.6971 -0.472935 125.795 -0.472856 183.491 8.86008" stroke="#A78BFA" strokeWidth="3" strokeLinecap="round" />
+                                    </svg>
+                                </span>
                             </h2>
 
                             <div className="flex flex-col gap-10">
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-4">
                                     <div className="w-3.5 h-3.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)] animate-pulse"></div>
-                                    <span className="text-[14px] font-black text-slate-400 uppercase tracking-widest">Next batch starts on Feb 9th</span>
+                                    <span className="text-[2xl] font-bold text-slate-400  tracking-wide">Next batch starts on Feb 9th</span>
                                 </div>
 
                                 <div className="flex flex-wrap gap-6">
@@ -66,29 +121,41 @@ const CareerSteps = () => {
                     </div>
 
                     {/* Right Timeline Column */}
-                    <div className="relative pl-12 md:pl-16">
+                    <div className="relative pl-12 md:pl-16" ref={sectionRef}>
+                        {/* Background grey line */}
+                        <div className="absolute top-3 bottom-0 left-[15px] w-[3px] bg-slate-300 -translate-x-1/2 md:left-[35px] md:top-6"></div>
+
+                        {/* Animated blue progress line */}
+                        <div
+                            className="absolute top-3 left-[15px] w-[3px] bg-[#183b56] -translate-x-1/2 md:left-[35px] md:top-6 transition-all duration-100 ease-linear"
+                            style={{ height: `${lineHeight}%`, maxHeight: 'calc(100% - 24px)' }}
+                        ></div>
+
+                        {/* Curved End Line */}
+                        <div className="absolute -bottom-[120px] right-[calc(100%-16.5px)] md:right-[calc(100%-36.5px)] w-[1000px] h-[120px] border-r-[3px] border-b-[3px] border-slate-300 rounded-br-[60px] pointer-events-none z-0"></div>
+
                         {/* Step 1: Fundamentals */}
                         <div className="mb-24 relative">
                             {/* Step Indicator */}
-                            <div className="absolute top-0 -left-[45px] md:-left-[53px] w-10 h-10 md:w-12 md:h-12 bg-[#183b56] text-white rounded-full flex items-center justify-center font-black text-lg md:text-xl border-[4px] border-white shadow-sm z-10">
+                            <div className={`absolute top-0 -left-[45px] md:-left-[53px] w-6 h-6 md:w-12 md:h-12 text-white rounded-full flex items-center justify-center font-black text-lg md:text-xl border-[4px] border-white shadow-sm z-10 transition-colors duration-300 ${lineHeight > 0 ? 'bg-[#183b56]' : 'bg-slate-300'}`}>
                                 1
                             </div>
 
                             <div className="space-y-8 pt-1.5 px-2">
-                                <h3 className="text-3xl md:text-4xl font-bold text-[#183b56]">Fundamentals</h3>
+                                <h3 className="text-2xl md:text-2xl font-bold text-[#183b56]">Fundamentals</h3>
 
-                                <div className="space-y-5 text-lg font-bold text-slate-500">
+                                <div className="space-y-5 text-lg font-medium text-slate-500">
                                     <div className="flex items-center gap-3">
-                                        <img src={clockIcon} alt="" className="h-6 w-6 object-contain" />
+                                        <img src={clockIcon} alt="" className="h-4 w-4 object-contain" />
                                         <p>Duration: <span className="text-[#183b56]">2 Months</span></p>
                                     </div>
                                     <div className="flex items-center rounded-full gap-3">
-                                        <img src={computerIcon} alt="" className="h-6 w-6 object-contain " />
+                                        <img src={computerIcon} alt="" className="h-4 w-4 object-contain " />
                                         <p>3 Hours Classes and 3 Hours Labs per day</p>
                                     </div>
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
-                                            <img src={booksIcon} alt="" className="h-6 w-6 object-contain" />
+                                            <img src={booksIcon} alt="" className="h-4 w-4 object-contain" />
                                             <p>Courses Include</p>
                                         </div>
                                         <div className="flex flex-wrap gap-4">
@@ -106,17 +173,18 @@ const CareerSteps = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3">
-                                        <img src={scrollIcon} alt="" className="h-6 w-6 object-contain" />
+                                        <img src={scrollIcon} alt="" className="h-4 w-4 object-contain" />
                                         <p>Fundamentals Exam</p>
                                     </div>
+                                    <div className="mt-2">
+                                        <a href="#" className="inline-flex items-center gap-2 text-[#7c3aed] font-medium group text-lg">
+                                            View Curriculum
+                                            <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <a href="#" className="inline-flex items-center gap-2 text-[#7c3aed] font-black group">
-                                    View Curriculum
-                                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
-                                </a>
-
                                 {/* Project Carousel/Mockup Preview */}
-                                <div className="relative mt-12 bg-slate-50 rounded-[32px] p-8 md:p-12 overflow-hidden min-h-[300px] flex items-center justify-center">
+                                <div className="relative mt-8 bg-slate-50 rounded-[32px] p-8 md:p-12 overflow-hidden min-h-[300px] flex items-center justify-center">
                                     <div className="w-full h-full flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${activeSlide * 100}%)` }}>
                                         {fundamentalSlides.map((slide, idx) => (
                                             <div key={idx} className="min-w-full flex justify-center px-4">
@@ -147,13 +215,13 @@ const CareerSteps = () => {
 
                         {/* Step 2: Job Tracks */}
                         <div className="mb-24 relative">
-                            <div className="absolute top-0 -left-[45px] md:-left-[53px] w-10 h-10 md:w-12 md:h-12 bg-[#183b56] text-white rounded-full flex items-center justify-center font-black text-lg md:text-xl border-[4px] border-white shadow-sm z-10">
+                            <div className={`absolute top-0 -left-[45px] md:-left-[53px] w-6 h-6 md:w-12 md:h-12 text-white rounded-full flex items-center justify-center font-black text-lg md:text-xl border-[4px] border-white shadow-sm z-10 transition-colors duration-300 ${lineHeight > 35 ? 'bg-[#183b56]' : 'bg-slate-300'}`}>
                                 2
                             </div>
 
                             <div className="space-y-8 pt-1.5 px-2">
                                 <div className="space-y-4">
-                                    <h3 className="text-3xl md:text-4xl font-bold text-[#183b56]">Choose your Job Track</h3>
+                                    <h3 className="text-2xl md:text-3xl font-bold text-[#183b56]">Choose your Job Track</h3>
                                     <p className="text-lg font-bold text-slate-500">Based on your Fundamentals exam score, we'll also recommend you a suitable Job Track.</p>
                                 </div>
 
@@ -165,10 +233,10 @@ const CareerSteps = () => {
                                             duration: '6 Months',
                                             salary: '3 LPA - 12 LPA',
                                             tech: [
-                                                { name: 'MongoDB', icon: 'https://assets.ccbp.in/frontend/react-js/mongodb-icon-img.png' },
-                                                { name: 'Express JS', icon: 'https://assets.ccbp.in/frontend/react-js/express-js-icon-img.png' },
-                                                { name: 'React JS', icon: 'https://assets.ccbp.in/frontend/react-js/react-js-icon-img.png' },
-                                                { name: 'Node JS', icon: 'https://assets.ccbp.in/frontend/react-js/node-js-icon-img.png' }
+                                                { name: 'MongoDB', icon: track1_1 },
+                                                { name: 'Express JS', icon: track1_2 },
+                                                { name: 'React JS', icon: track1_3 },
+                                                { name: 'Node JS', icon: track1_4 }
                                             ],
                                             color: '#2563eb',
                                             status: 'Seats Available',
@@ -180,9 +248,9 @@ const CareerSteps = () => {
                                             duration: '6 Months',
                                             salary: '3 LPA - 12 LPA',
                                             tech: [
-                                                { name: 'React JS', icon: 'https://assets.ccbp.in/frontend/react-js/react-js-icon-img.png' },
-                                                { name: 'Java', icon: 'https://assets.ccbp.in/frontend/react-js/java-icon-img.png' },
-                                                { name: 'Spring', icon: 'https://assets.ccbp.in/frontend/react-js/spring-icon-img.png' }
+                                                { name: 'React JS', icon: track2_1 },
+                                                { name: 'Java', icon: track2_2 },
+                                                { name: 'Spring', icon: track2_3 }
                                             ],
                                             color: '#f59e0b',
                                             status: 'Seats Available',
@@ -194,7 +262,7 @@ const CareerSteps = () => {
                                             duration: '3 Months',
                                             salary: '2 LPA - 7 LPA',
                                             tech: [
-                                                { name: 'Selenium', icon: 'https://assets.ccbp.in/frontend/react-js/selenium-icon-img.png' }
+                                                { name: 'Selenium', icon: track3_1 }
                                             ],
                                             color: '#7c3aed',
                                             status: 'Seats filled. Next batch starts on 01 Jul 2026',
@@ -206,8 +274,8 @@ const CareerSteps = () => {
                                             duration: '3 Months',
                                             salary: '2 LPA - 7 LPA',
                                             tech: [
-                                                { name: 'Power BI', icon: 'https://assets.ccbp.in/frontend/react-js/power-bi-icon-img.png' },
-                                                { name: 'Tableau', icon: 'https://assets.ccbp.in/frontend/react-js/tableau-icon-img.png' }
+                                                { name: 'Power BI', icon: track4_1 },
+                                                { name: 'Tableau', icon: track4_2 }
                                             ],
                                             color: '#0d9488',
                                             status: 'Seats filled. Next batch starts on 01 Jul 2026',
@@ -250,7 +318,7 @@ const CareerSteps = () => {
                                                 <div className="flex flex-wrap gap-6 mb-10">
                                                     {track.tech.map((t, ti) => (
                                                         <div key={ti} className="flex flex-col items-center gap-2">
-                                                            <img src={t.icon} alt={t.name} className="h-7 w-auto object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
+                                                            <img src={t.icon} alt={t.name} className="h-10 object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
                                                             <span className="text-[10px] font-bold text-slate-400 text-center">{t.name}</span>
                                                         </div>
                                                     ))}
@@ -264,7 +332,7 @@ const CareerSteps = () => {
 
                                             <div className={`px-8 py-4 border-t flex items-center justify-center gap-2 text-[13px] font-bold ${track.limited ? 'bg-orange-50 text-orange-600 border-orange-100' : 'bg-green-50 text-green-600 border-green-100'}`}>
                                                 {track.limited ? (
-                                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" /></svg>
+                                                    <img src={lockIcon} alt="Locked" className="w-4 h-4 object-contain" />
                                                 ) : (
                                                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                                                 )}
@@ -278,14 +346,14 @@ const CareerSteps = () => {
 
                         {/* Step 3: Placement Assistance */}
                         <div className="relative">
-                            <div className="absolute top-0 -left-[45px] md:-left-[53px] w-10 h-10 md:w-12 md:h-12 bg-[#183b56] text-white rounded-full flex items-center justify-center font-black text-lg md:text-xl border-[4px] border-white shadow-sm z-10">
+                            <div className={`absolute top-0 -left-[45px] md:-left-[53px] w-6 h-6 md:w-12 md:h-12 text-white rounded-full flex items-center justify-center font-black text-lg md:text-xl border-[4px] border-white shadow-sm z-10 transition-colors duration-300 ${lineHeight > 80 ? 'bg-[#183b56]' : 'bg-slate-300'}`}>
                                 3
                             </div>
 
                             <div className="space-y-12 pt-1.5 px-2">
                                 <div className="space-y-4">
-                                    <h3 className="text-3xl md:text-4xl font-bold text-[#183b56]">Placement Assistance for Your Job</h3>
-                                    <p className="text-lg font-bold text-slate-400">Up to 16 Months from the date of joining</p>
+                                    <h3 className="text-2xl md:text-2xl font-bold text-[#183b56]">Placement Assistance for Your Job</h3>
+                                    <p className="text-lg font-medium  text-[#334155]">Up to 16 Months from the date of joining</p>
                                 </div>
 
                                 <div className="space-y-8">

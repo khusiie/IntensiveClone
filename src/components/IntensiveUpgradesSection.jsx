@@ -12,12 +12,12 @@ const IntensiveUpgradesSection = () => {
             description: 'To learn coding best practices, get interview tips, discuss doubts and more from experts.'
         },
         {
-            icon: coachIcon,
+            icon: managerIcon,
             title: 'Dedicated Success Coach for Every Student',
             description: 'To guide you and ensure a smooth learning journey'
         },
         {
-            icon: managerIcon,
+            icon: coachIcon,
             title: 'Placement Success Manager',
             description: 'To give feedback on your interview performance and boost your confidence'
         },
@@ -41,10 +41,10 @@ const IntensiveUpgradesSection = () => {
 
                 {/* Heading */}
                 <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-[46px] font-black text-[#183b56] leading-[1.15]">
+                    <h2 className="text-4xl md:text-[46px] font-bold text-[#183b56] leading-[1.15]">
                         The All New Intensive 3.0 Upgrades to
                     </h2>
-                    <h2 className="text-4xl md:text-[46px] font-black text-[#183b56] leading-[1.15] relative inline-block mt-2">
+                    <h2 className="text-4xl md:text-[46px] font-bold text-[#183b56] leading-[1.15] relative inline-block mt-2">
                         Supercharge Your Career
                         <svg className="absolute -bottom-3 left-0 w-full" height="8" viewBox="0 0 300 8" preserveAspectRatio="none">
                             <path d="M0,4 Q75,8 150,4 T300,4" stroke="#7c3aed" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.7" />
@@ -60,7 +60,7 @@ const IntensiveUpgradesSection = () => {
                                 <img
                                     src={feature.icon}
                                     alt={feature.title}
-                                    className="w-14 h-14 object-contain transition-transform group-hover:scale-110"
+                                    className="w-20 h-20 object-contain transition-transform group-hover:scale-110"
                                 />
                                 {feature.badge && (
                                     <span className={`absolute -top-1 -right-2 ${feature.badgeColor} text-white text-[8px] font-black px-2 py-0.5 rounded-full shadow-sm`}>
@@ -69,7 +69,7 @@ const IntensiveUpgradesSection = () => {
                                 )}
                             </div>
                             <div>
-                                <h3 className="text-[17px] font-black text-[#183b56] mb-1.5 leading-snug">{feature.title}</h3>
+                                <h3 className="text-[17px] font-bold text-[#183b56] mb-1.5 leading-snug">{feature.title}</h3>
                                 <p className="text-[14px] font-medium text-slate-400 leading-relaxed">{feature.description}</p>
                             </div>
                         </div>
