@@ -125,14 +125,15 @@ const SeniorsPlacedSection = () => {
                 <div className="flex flex-col items-center gap-10">
                     <div className="flex items-center gap-2.5">
                         <div className="w-3.5 h-3.5 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.6)] animate-pulse"></div>
-                        <span className="text-[13px] font-black text-slate-400 uppercase tracking-widest">Batch starts today</span>
+                        <span className="text-[13px] font-bold text-slate-400 tracking-widest">
+                            Next batch starts on Feb 9th</span>
                     </div>
 
                     <div className="flex items-center gap-10">
-                        <button className="bg-[#7c3aed] text-white px-16 py-4 rounded-2xl font-black text-lg shadow-[0_15px_35px_-10px_rgba(124,58,237,0.5)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
-                            Enroll Now
+                        <button className="bg-[#7c3aed] text-white px-16 py-4 rounded-2xl font-bold text-lg shadow-[0_15px_35px_-10px_rgba(124,58,237,0.5)] hover:bg-[#6d28d9] transition-all transform hover:-translate-y-1">
+                            Book a Free Demo
                         </button>
-                        <a href="#" className="text-[#2563eb] font-black text-lg hover:underline transition-all">
+                        <a href="#" className="text-[#7c3aed] font-bold text-lg hover:underline transition-all">
                             View All Reviews
                         </a>
                     </div>

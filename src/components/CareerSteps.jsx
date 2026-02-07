@@ -35,6 +35,7 @@ import htmlIcon from '../assets/Fundamental/course/image.png';
 import cssIcon from '../assets/Fundamental/course/image copy.png';
 import pythonIcon from '../assets/Fundamental/course/image copy 2.png';
 import sqlIcon from '../assets/Fundamental/course/image copy 3.png';
+import greenTickIcon from '../assets/tick/image.png';
 
 const CareerSteps = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -221,7 +222,7 @@ const CareerSteps = () => {
 
                             <div className="space-y-8 pt-1.5 px-2">
                                 <div className="space-y-4">
-                                    <h3 className="text-2xl md:text-3xl font-bold text-[#183b56]">Choose your Job Track</h3>
+                                    <h3 className="text-2xl md:text-xl font-bold text-[#183b56]">Choose your Job Track</h3>
                                     <p className="text-lg font-bold text-slate-500">Based on your Fundamentals exam score, we'll also recommend you a suitable Job Track.</p>
                                 </div>
 
@@ -286,32 +287,32 @@ const CareerSteps = () => {
                                             <div className="p-8 flex-grow">
                                                 <div className="mb-6">
                                                     <span
-                                                        className="text-[10px] font-black tracking-widest px-3 py-1 rounded-full uppercase"
+                                                        className="text-[10px] font-bold tracking-widest px-3 py-1 rounded-full uppercase"
                                                         style={{ backgroundColor: `${track.color}15`, color: track.color }}
                                                     >
                                                         {track.option}
                                                     </span>
                                                 </div>
-                                                <h4 className="text-2xl font-bold text-[#183b56] mb-8">{track.name}</h4>
+                                                <h4 className="text-lg font-medium text-[#183b56] mb-8">{track.name}</h4>
 
                                                 <div className="space-y-5 mb-10">
                                                     <div className="flex items-center gap-3">
                                                         <div className="w-5 h-5 flex items-center justify-center opacity-60">
                                                             <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                                         </div>
-                                                        <p className="text-[15px] font-medium text-slate-500">Duration: <span className="font-bold text-[#183b56]">{track.duration}</span></p>
+                                                        <p className="text-[14px] font-medium text-slate-500">Duration: {track.duration}</p>
                                                     </div>
                                                     <div className="flex items-start gap-3">
                                                         <div className="w-5 h-5 flex items-center justify-center opacity-60 mt-0.5">
                                                             <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>
                                                         </div>
-                                                        <p className="text-[15px] font-medium text-slate-500 leading-tight">Fresher Salaries : <span className="font-bold text-[#183b56]">{track.salary}</span> In India</p>
+                                                        <p className="text-[12px] font-medium text-slate-500 leading-tight">Fresher Salaries : <span className='text-[14px]'>{track.salary}</span> In India</p>
                                                     </div>
                                                     <div className="flex items-center gap-3">
                                                         <div className="w-5 h-5 flex items-center justify-center opacity-60">
                                                             <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                                                         </div>
-                                                        <p className="text-[15px] font-bold text-[#183b56]">Real-time project</p>
+                                                        <p className="text-[14px] text-slate-500">Real-time project</p>
                                                     </div>
                                                 </div>
 
@@ -324,17 +325,17 @@ const CareerSteps = () => {
                                                     ))}
                                                 </div>
 
-                                                <a href="#" className="flex items-center gap-2 text-[#7c3aed] font-bold text-[14px] hover:translate-x-1 transition-transform w-fit">
+                                                <a href="#" className="flex items-center gap-2 text-[#7c3aed] font-medium text-[14px] hover:translate-x-1 transition-transform w-fit">
                                                     View Curriculum
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" /></svg>
                                                 </a>
                                             </div>
 
-                                            <div className={`px-8 py-4 border-t flex items-center justify-center gap-2 text-[13px] font-bold ${track.limited ? 'bg-orange-50 text-orange-600 border-orange-100' : 'bg-green-50 text-green-600 border-green-100'}`}>
+                                            <div className={`px-8 py-4 border-t flex items-center justify-center gap-2 text-[13px] font-bold ${track.limited ? 'bg-orange-50 text-[#D97706] border-orange-100' : 'bg-green-50 text-green-600 border-green-100'}`}>
                                                 {track.limited ? (
                                                     <img src={lockIcon} alt="Locked" className="w-4 h-4 object-contain" />
                                                 ) : (
-                                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                                    <img src={greenTickIcon} alt="Available" className="w-4 h-4 object-contain" />
                                                 )}
                                                 {track.status}
                                             </div>
