@@ -4,10 +4,10 @@ import eligibilityIcon from '../assets/Third/image copy 2.png';
 import onlineIcon from '../assets/Third/image copy.png';
 import supportIcon from '../assets/Third/image copy 3.png';
 
-import testimonial1 from '../assets/HeroSec/{038963A2-B9B7-4A07-A105-42235340CCDC}.png';
-import testimonial2 from '../assets/HeroSec/{756F80F2-F1B1-4B8E-A5C2-E3ED759FBBC4}.png';
-import testimonial3 from '../assets/HeroSec/{7C3698AB-0DC0-4899-AF7C-947947430805}.png';
-import testimonial4 from '../assets/HeroSec/{7D659E91-8F26-4C9E-9334-90350C03A645}.png';
+import testimonial1 from '../assets/testimonials/1.png';
+import testimonial2 from '../assets/testimonials/2.png';
+import testimonial3 from '../assets/testimonials/3.png';
+import testimonial4 from '../assets/testimonials/4.png';
 
 const bottomFeatures = [
     { icon: durationIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
