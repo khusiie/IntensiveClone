@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logoImage from '../assets/image.png';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar = () => {
 
                         {/* Logo */}
                         <a href="#" className="flex items-center">
-                            <img src="/src/assets/image.png" alt="NxtWave Intensive" className="h-[52px] object-contain" />
+                            <img src={logoImage} alt="NxtWave Intensive" className="h-[52px] object-contain" />
                         </a>
 
                         {/* Desktop Navigation */}

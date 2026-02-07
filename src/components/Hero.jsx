@@ -9,6 +9,10 @@ import testimonial2 from '../assets/testimonials/2.png';
 import testimonial3 from '../assets/testimonials/3.png';
 import testimonial4 from '../assets/testimonials/4.png';
 
+import fireworksImage from '../assets/image copy.png';
+import partyPopperImage from '../assets/image copy 2.png';
+import demoCharacterImage from '../assets/image copy 3.png';
+
 const bottomFeatures = [
     { icon: durationIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
     { icon: eligibilityIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
@@ -98,7 +102,7 @@ const Hero = () => {
                 <div className="flex justify-center items-center gap-0">
                     {/* Left Fireworks */}
                     <img
-                        src="/src/assets/image copy.png"
+                        src={fireworksImage}
                         alt=""
                         className="hidden sm:block h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain -mr-3 md:-mr-20"
                     />
@@ -106,7 +110,7 @@ const Hero = () => {
                     {/* Text Content */}
                     <div className="flex items-center justify-center gap-2 md:gap-3 relative z-10 transition-all duration-300 px-2 sm:px-0">
                         {/* Party Popper Emoji/Icon */}
-                        <img src="/src/assets/image copy 2.png" alt="🎉" className="w-4 h-4 md:w-6 md:h-6" />
+                        <img src={partyPopperImage} alt="🎉" className="w-4 h-4 md:w-6 md:h-6" />
 
                         <div className="flex flex-wrap items-center justify-center sm:justify-start font-medium tracking-tight text-center sm:text-left gap-x-2">
                             <span className="text-[#bef264] text-[11px] sm:text-[17px] leading-tight">
@@ -129,7 +133,7 @@ const Hero = () => {
 
                     {/* Right Fireworks */}
                     <img
-                        src="/src/assets/image copy.png"
+                        src={fireworksImage}
                         alt=""
                         className="hidden sm:block h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain transform scale-x-[-1] -ml-3 md:-ml-20"
                     />
@@ -239,7 +243,7 @@ const Hero = () => {
                                     </h3>
                                 </div>
                                 <div className="relative">
-                                    <img src="/src/assets/image copy 3.png" alt="Demo Character" className="w-[100px] h-auto relative z-10" />
+                                    <img src={demoCharacterImage} alt="Demo Character" className="w-[100px] h-auto relative z-10" />
                                     {/* Gray Shelf */}
                                     <div className="absolute bottom-0 left-[-10px] right-[-10px] h-[4px] bg-slate-200 rounded-full"></div>
                                 </div>
