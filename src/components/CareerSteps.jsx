@@ -351,15 +351,15 @@ const CareerSteps = () => {
                                 3
                             </div>
 
-                            <div className="space-y-12 pt-1.5 px-2">
-                                <div className="space-y-4">
-                                    <h3 className="text-2xl md:text-2xl font-bold text-[#183b56]">Placement Assistance for Your Job</h3>
-                                    <p className="text-lg font-medium  text-[#334155]">Up to 16 Months from the date of joining</p>
+                            <div className="space-y-8 md:space-y-12 pt-1.5 px-2">
+                                <div className="space-y-3 md:space-y-4">
+                                    <h3 className="text-xl md:text-2xl font-bold text-[#183b56]">Placement Assistance for Your Job</h3>
+                                    <p className="text-base md:text-lg font-medium text-[#334155]">Up to 16 Months from the date of joining</p>
                                 </div>
 
-                                <div className="space-y-8">
-                                    <p className="text-xl font-bold text-[#183b56]">Free Add-ons:</p>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-12">
+                                <div className="space-y-6 md:space-y-8">
+                                    <p className="text-lg md:text-xl font-bold text-[#183b56]">Free Add-ons:</p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 md:gap-y-10 gap-x-8 md:gap-x-12">
                                         {[
                                             { name: 'Aptitude Training', icon: addon1 },
                                             { name: 'Soft Skills Training', icon: addon2 },
@@ -372,22 +372,22 @@ const CareerSteps = () => {
                                             { name: 'Mega Offline Placement Drives', icon: addon9 },
                                             { name: 'Negotiation with companies for higher salaries', icon: addon10 }
                                         ].map((item, i) => (
-                                            <div key={i} className="flex items-center gap-5">
-                                                <div className="w-12 h-12 flex-shrink-0 bg-slate-50 rounded-xl p-3 flex items-center justify-center shadow-sm">
-                                                    <img src={item.icon} alt={item.name} className="w-full h-auto" />
+                                            <div key={i} className="flex items-center gap-4">
+                                                <div className="flex-none w-10 h-10 md:w-12 md:h-12 bg-slate-50 rounded-xl p-2 flex items-center justify-center shadow-sm">
+                                                    <img src={item.icon} alt={item.name} className="w-full h-full object-contain" />
                                                 </div>
-                                                <p className="text-base font-bold text-slate-600 leading-tight">{item.name}</p>
+                                                <p className="flex-1 text-sm md:text-base font-bold text-slate-600 leading-tight text-left">{item.name}</p>
                                             </div>
                                         ))}
                                     </div>
                                 </div>
 
                                 {/* Placement Dashboard Preview */}
-                                <div className="mt-16 bg-gradient-to-br from-white to-blue-50/50 rounded-[32px] p-8 overflow-hidden relative border border-slate-100 shadow-sm">
+                                <div className="mt-10 md:mt-16 bg-gradient-to-br from-white to-blue-50/50 rounded-[20px] md:rounded-[32px] p-6 md:p-8 overflow-hidden relative border border-slate-100 shadow-sm">
                                     <div className="flex justify-center">
-                                        <img src={dashboardImg} alt="Dashboard" className="w-3/4 h-auto transform transition-transform hover:scale-105 duration-700 pointer-events-none" />
+                                        <img src={dashboardImg} alt="Dashboard" className="w-full md:w-3/4 h-auto transform transition-transform hover:scale-105 duration-700 pointer-events-none" />
                                     </div>
-                                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+                                    <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
                                         <div className="w-1.5 h-1.5 rounded-full bg-[#183b56]"></div>
                                         <div className="w-1.5 h-1.5 rounded-full bg-slate-300"></div>
                                     </div>

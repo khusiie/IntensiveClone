@@ -29,38 +29,38 @@ const IntensiveUpgradesSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-white" id="intensive-upgrades">
+        <section className="py-14 md:py-24 bg-white" id="intensive-upgrades">
             <div className="max-w-[1100px] mx-auto px-6">
 
-                {/* NEW Badge - Left aligned */}
-                <div className="flex justify-start mb-6 ml-2">
+                {/* NEW Badge - Centered on mobile, Left aligned on desktop */}
+                <div className="flex justify-center md:justify-start mb-6 md:ml-2">
                     <span className="bg-[#ef4444] text-white text-[10px] font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
                         NEW
                     </span>
                 </div>
 
                 {/* Heading */}
-                <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-[46px] font-bold text-[#183b56] leading-[1.15]">
+                <div className="text-center mb-12 md:mb-20">
+                    <h2 className="text-3xl md:text-[46px] font-bold text-[#183b56] leading-[1.15]">
                         The All New Intensive 3.0 Upgrades to
                     </h2>
-                    <h2 className="text-4xl md:text-[46px] font-bold text-[#183b56] leading-[1.15] relative inline-block mt-2">
+                    <h2 className="text-3xl md:text-[46px] font-bold text-[#183b56] leading-[1.15] relative inline-block mt-2">
                         Supercharge Your Career
-                        <svg className="absolute -bottom-3 left-0 w-full" height="8" viewBox="0 0 300 8" preserveAspectRatio="none">
+                        <svg className="absolute -bottom-2 md:-bottom-3 left-0 w-full" height="8" viewBox="0 0 300 8" preserveAspectRatio="none">
                             <path d="M0,4 Q75,8 150,4 T300,4" stroke="#7c3aed" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.7" />
                         </svg>
                     </h2>
                 </div>
 
                 {/* Features Grid - 2 columns */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-14 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-20 md:gap-y-14 mb-10 md:mb-16">
                     {features.map((feature, i) => (
-                        <div key={i} className="flex items-start gap-3 group">
+                        <div key={i} className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-4 md:gap-3 group">
                             <div className="relative flex-shrink-0">
                                 <img
                                     src={feature.icon}
                                     alt={feature.title}
-                                    className="w-20 h-20 object-contain transition-transform group-hover:scale-110"
+                                    className="w-16 h-16 md:w-20 md:h-20 object-contain transition-transform group-hover:scale-110"
                                 />
                                 {feature.badge && (
                                     <span className={`absolute -top-1 -right-2 ${feature.badgeColor} text-white text-[8px] font-black px-2 py-0.5 rounded-full shadow-sm`}>
@@ -69,7 +69,7 @@ const IntensiveUpgradesSection = () => {
                                 )}
                             </div>
                             <div>
-                                <h3 className="text-[17px] font-bold text-[#183b56] mb-1.5 leading-snug">{feature.title}</h3>
+                                <h3 className="text-[16px] md:text-[17px] font-bold text-[#183b56] mb-1.5 leading-snug">{feature.title}</h3>
                                 <p className="text-[14px] font-medium text-slate-400 leading-relaxed">{feature.description}</p>
                             </div>
                         </div>

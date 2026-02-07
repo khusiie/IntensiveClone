@@ -184,13 +184,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            {/* Floating WhatsApp CTA */}
-            <div className="fixed bottom-6 right-6 z-[1000] scale-110 md:scale-125">
-                <button className="bg-[#25d366] text-white px-5 py-2.5 rounded-full flex items-center gap-2.5 font-bold shadow-[0_10px_25px_-5px_rgba(37,211,102,0.4)] hover:bg-[#128c7e] transition-all duration-300 hover:scale-105 active:scale-95">
-                    <span className="text-xs">Chat with us</span>
-                    <FaWhatsapp className="w-5 h-5" />
-                </button>
-            </div>
+
         </footer>
     );
 };

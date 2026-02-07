@@ -4,15 +4,15 @@ import eligibilityIcon from '../assets/Third/image copy 2.png';
 import onlineIcon from '../assets/Third/image copy.png';
 import supportIcon from '../assets/Third/image copy 3.png';
 
-import testimonial1 from '../assets/Hero/image.png';
-import testimonial2 from '../assets/Hero/image copy.png';
-import testimonial3 from '../assets/Hero/image copy 2.png';
-import testimonial4 from '../assets/Hero/image copy 3.png';
+import testimonial1 from '../assets/HeroSec/{038963A2-B9B7-4A07-A105-42235340CCDC}.png';
+import testimonial2 from '../assets/HeroSec/{756F80F2-F1B1-4B8E-A5C2-E3ED759FBBC4}.png';
+import testimonial3 from '../assets/HeroSec/{7C3698AB-0DC0-4899-AF7C-947947430805}.png';
+import testimonial4 from '../assets/HeroSec/{7D659E91-8F26-4C9E-9334-90350C03A645}.png';
 
 const bottomFeatures = [
-    { icon: onlineIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
-    { icon: durationIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
-    { icon: eligibilityIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
+    { icon: durationIcon, label: 'Course Duration', value: '5-8 months based on the Job Track you choose' },
+    { icon: eligibilityIcon, label: 'Eligibility', value: 'B. Tech (all branches), BSc, B.Com, BBA, etc. No CGPA cut-off' },
+    { icon: onlineIcon, label: 'Online', value: '3 Hours Classes and 3 Hours Labs Every Day' },
     {
         icon: supportIcon, label: 'Support', badge: 'NEW', value: 'Dedicated Success Coach and Live Sessions with course mentors'
     }
@@ -74,27 +74,27 @@ const Hero = () => {
         <section className="relative bg-white overflow-hidden" id="hero" >
             {/* Announcement Bar with Confetti */}
             <div className="bg-[#030712] py-1 relative overflow-hidden">
-                <div className="flex justify-center items-center gap-0 px-4">
+                <div className="flex justify-center items-center gap-0">
                     {/* Left Fireworks */}
                     <img
                         src="/src/assets/image copy.png"
                         alt=""
-                        className="h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain -mr-3 md:-mr-6"
+                        className="hidden sm:block h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain -mr-3 md:-mr-20"
                     />
 
                     {/* Text Content */}
-                    <div className="flex items-center gap-1 relative z-10 transition-all duration-300">
+                    <div className="flex items-center justify-center gap-2 md:gap-3 relative z-10 transition-all duration-300 px-2 sm:px-0">
                         {/* Party Popper Emoji/Icon */}
-                        <img src="/src/assets/image copy 2.png" alt="🎉" className="w-5 h-5 md:w-6 md:h-6 animate-bounce" />
+                        <img src="/src/assets/image copy 2.png" alt="🎉" className="w-4 h-4 md:w-6 md:h-6" />
 
-                        <div className="flex items-center flex-nowrap font-medium tracking-tight whitespace-nowrap">
-                            <span className="text-[#bef264] text-[14px] md:text-[17px]">
+                        <div className="flex flex-wrap items-center justify-center sm:justify-start font-medium tracking-tight text-center sm:text-left gap-x-2">
+                            <span className="text-[#bef264] text-[11px] sm:text-[17px] leading-tight">
                                 NxtWave Intensive Offline Center is starting in Hyderabad.
                             </span>
-                            <a href="#" className="text-white text-[13px] md:text-[16px] hover:underline flex items-center gap-1.5 ml-3 md:ml-4 group whitespace-nowrap">
+                            <a href="#" className="text-white text-[11px] sm:text-[16px] hover:underline flex items-center gap-1 group whitespace-nowrap">
                                 Check It Out
                                 <svg
-                                    className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                                    className="w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                                     fill="none"
                                     stroke="currentColor"
                                     strokeWidth="2.5"
@@ -110,7 +110,7 @@ const Hero = () => {
                     <img
                         src="/src/assets/image copy.png"
                         alt=""
-                        className="h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain transform scale-x-[-1] -ml-3 md:-ml-6"
+                        className="hidden sm:block h-9 md:h-12 w-10 md:w-20 opacity-100 pointer-events-none flex-shrink-0 object-contain transform scale-x-[-1] -ml-3 md:-ml-20"
                     />
                 </div>
             </div>
@@ -118,13 +118,13 @@ const Hero = () => {
 
 
             {/* Main Hero Content */}
-            <div className="relative min-h-[500px] mt-8">
+            <div className="relative min-h-[500px] mt-20">
 
                 {/* Curved Teal Background */}
-                <div className="absolute right-0 top-0 w-[55%] h-full bg-gradient-to-br from-[#2dd4bf] to-[#14b8a6] rounded-bl-[100px] -z-10"></div>
+                <div className="hidden md:block absolute right-0 top-0 w-[55%] h-full bg-gradient-to-br from-[#2dd4bf] to-[#14b8a6] rounded-bl-[100px] -z-10"></div>
 
                 {/* Dark decorative strip on extreme right */}
-                <div className="absolute right-0 top-0 w-[60px] h-full bg-[#0f172a] -z-20"></div>
+                <div className="hidden md:block absolute right-0 top-0 w-[60px] h-full bg-[#0f172a] -z-20"></div>
 
                 <div className="max-w-[1300px] mx-auto px-6 py-4 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
 
@@ -158,34 +158,28 @@ const Hero = () => {
                             </h1>
                         </div>
 
-                        {/* Testimonial Quote */}
-                        <div className="pt-4 h-[180px]"> {/* Fixed height to prevent layout shifts */}
-                            <div className="relative pl-8 border-l-4 border-slate-200 transition-all duration-500">
-                                <span className="absolute -left-3 top-0 text-5xl text-slate-200 font-serif leading-none">"</span>
-                                <p className="text-lg font-bold text-slate-600 italic leading-relaxed mb-6">
-                                    {testimonials[activeTestimonial].text}
-                                </p>
-                                <div className="flex items-center gap-4">
-                                    <img src={testimonials[activeTestimonial].image} alt={testimonials[activeTestimonial].name} className="w-16 h-16 rounded-full object-cover" />
-                                    <div>
-                                        <p className="text-sm font-black text-[#183b56]">{testimonials[activeTestimonial].name}</p>
-                                        <p className="text-xs text-slate-400 font-medium">{testimonials[activeTestimonial].education}</p>
-                                    </div>
-                                    <div className="w-px h-8 bg-slate-200 mx-2"></div>
-                                    <img src={testimonials[activeTestimonial].companyLogo} alt="Company" className="h-6 object-contain" />
-                                </div>
+                        {/* Testimonial Card */}
+                        {/* Testimonial Image Only */}
+                        <div className="pt-8">
+                            <div className="w-full flex justify-center md:justify-start transition-all duration-500">
+                                <img
+                                    src={testimonials[activeTestimonial].image}
+                                    alt="Success Story"
+                                    className="w-full max-w-[450px] h-auto object-contain"
+                                />
                             </div>
-                        </div>
 
-                        {/* Carousel Dots */}
-                        <div className="flex items-center gap-2 pt-2 pl-8">
-                            {testimonials.map((_, index) => (
-                                <button
-                                    key={index}
-                                    onClick={() => setActiveTestimonial(index)}
-                                    className={`rounded-full transition-all duration-300 ${activeTestimonial === index ? 'w-6 h-2 bg-[#2563eb]' : 'w-2 h-2 bg-slate-300 hover:bg-slate-400'}`}
-                                ></button>
-                            ))}
+                            {/* Carousel Dots */}
+                            <div className="w-full max-w-[450px] flex justify-center items-center gap-2 mt-6">
+                                {testimonials.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => setActiveTestimonial(index)}
+                                        className={`rounded-full transition-all duration-300 ${activeTestimonial === index ? 'w-8 h-2.5 bg-[#334155]' : 'w-2.5 h-2.5 bg-slate-200 hover:bg-slate-300'}`}
+                                        aria-label={`Go to slide ${index + 1}`}
+                                    ></button>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
@@ -286,10 +280,10 @@ const Hero = () => {
                 <div className="max-w-[1300px] mx-auto px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {bottomFeatures.map((feat, i) => (
-                            <div key={i} className="flex items-start gap-4">
-                                <img src={feat.icon} alt="" className="w-12 h-12 object-contain flex-shrink-0 mt-1" />
+                            <div key={i} className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3 sm:gap-4">
+                                <img src={feat.icon} alt="" className="w-12 h-12 object-contain flex-shrink-0" />
                                 <div>
-                                    <div className="flex items-center gap-2 mb-1.5">
+                                    <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5">
                                         <p className="text-white font-bold text-sm">{feat.label}</p>
                                         {feat.badge && <span className="bg-[#ef4444] text-white text-[8px] font-black px-2 py-0.5 rounded-full">{feat.badge}</span>}
                                     </div>

@@ -42,79 +42,79 @@ const PricingSection = () => {
                     {plan === 'post-paid' ? (
                         <div className="space-y-6">
                             {/* Inclusions Grid */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-8">
-                                <div className="flex gap-3 items-center">
-                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 md:gap-y-10 gap-x-8">
+                                <div className="flex gap-4 items-center">
+                                    <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-medium text-[#475569]">Fundamentals of IT</p>
+                                        <p className="text-base md:text-lg font-medium text-[#475569]">Fundamentals of IT</p>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-3 items-center">
-                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                                <div className="flex gap-4 items-center">
+                                    <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-medium text-[#475569]">Unlimited opportunities from a pool of 3000+ companies</p>
+                                        <p className="text-base md:text-lg font-medium text-[#475569]">Unlimited opportunities from a pool of 3000+ companies</p>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-3 items-center">
-                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <div className="flex gap-4 items-start">
+                                    <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-medium text-[#475569]">9AM - 9PM Doubt Clarification.</p>
-                                        <p className="text-sm text-slate-500 mt-0.5">1500+ Mentors to help you.</p>
+                                        <p className="text-base md:text-lg font-medium text-[#475569]">9AM - 9PM Doubt Clarification.</p>
+                                        <p className="text-xs md:text-sm text-slate-500 mt-0.5">1500+ Mentors to help you.</p>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-3 items-start">
-                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                                <div className="flex gap-4 items-start">
+                                    <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
                                     </div>
-                                    <div className="flex flex-col gap-4 w-full">
-                                        <p className="text-lg font-medium text-[#475569]">Multiple Job Tracks</p>
+                                    <div className="flex flex-col gap-3 w-full">
+                                        <p className="text-base md:text-lg font-medium text-[#475569]">Multiple Job Tracks</p>
                                         <div className="space-y-2">
-                                            <div className="flex items-center gap-2 p-2 px-4 border border-blue-100 rounded-full w-fit">
-                                                <img src={javaIcon} className="h-6 w-6 object-contain" alt="Java" />
-                                                <span className="text-base font-medium text-[#475569]">Java Full Stack</span>
+                                            <div className="flex items-center gap-2 p-1.5 px-3 md:p-2 md:px-4 border border-blue-100 rounded-full w-fit">
+                                                <img src={javaIcon} className="h-5 w-5 md:h-6 md:w-6 object-contain" alt="Java" />
+                                                <span className="text-sm md:text-base font-medium text-[#475569]">Java Full Stack</span>
                                             </div>
-                                            <div className="flex items-center gap-2 p-2 px-4 border border-blue-100 rounded-full w-fit">
-                                                <img src={mernIcon} className="h-6 w-6 object-contain" alt="MERN" />
-                                                <span className="text-base font-medium text-[#475569]">MERN Full Stack</span>
+                                            <div className="flex items-center gap-2 p-1.5 px-3 md:p-2 md:px-4 border border-blue-100 rounded-full w-fit">
+                                                <img src={mernIcon} className="h-5 w-5 md:h-6 md:w-6 object-contain" alt="MERN" />
+                                                <span className="text-sm md:text-base font-medium text-[#475569]">MERN Full Stack</span>
                                             </div>
-                                            <div className="p-3 border border-blue-100 rounded-xl relative">
+                                            <div className="p-2 md:p-3 border border-blue-100 rounded-xl relative">
                                                 <div className="flex items-center gap-2">
-                                                    <img src={dataIcon} className="h-6 w-6 object-contain" alt="Data Analytics" />
-                                                    <span className="text-base font-medium text-[#475569]">Data Analytics</span>
+                                                    <img src={dataIcon} className="h-5 w-5 md:h-6 md:w-6 object-contain" alt="Data Analytics" />
+                                                    <span className="text-sm md:text-base font-medium text-[#475569]">Data Analytics</span>
                                                 </div>
-                                                <div className="text-[12px] text-[#D97706] font-medium mt-1 flex items-center gap-1">
-                                                    <img src={lockIcon} alt="" className="w-4 h-4" /> Seats filled. Next batch starts on 01 Jul 2026
+                                                <div className="text-[10px] md:text-[12px] text-[#D97706] font-medium mt-1 flex items-center gap-1">
+                                                    <img src={lockIcon} alt="" className="w-3 h-3 md:w-4 md:h-4" /> Seats filled. Next batch starts on 01 Jul 2026
                                                 </div>
                                             </div>
-                                            <div className="p-3 border border-blue-100 rounded-xl relative">
+                                            <div className="p-2 md:p-3 border border-blue-100 rounded-xl relative">
                                                 <div className="flex items-center gap-2">
-                                                    <img src={qaIcon} className="h-6 w-6 object-contain" alt="QA" />
-                                                    <span className="text-base font-medium text-[#475569]">QA / Automation Testing</span>
+                                                    <img src={qaIcon} className="h-5 w-5 md:h-6 md:w-6 object-contain" alt="QA" />
+                                                    <span className="text-sm md:text-base font-medium text-[#475569]">QA / Automation Testing</span>
                                                 </div>
-                                                <div className="text-[12px] text-[#D97706] font-medium mt-1 flex items-center gap-1">
-                                                    <img src={lockIcon} alt="" className="w-4 h-4" /> Seats filled. Next batch starts on 01 Jul 2026
+                                                <div className="text-[10px] md:text-[12px] text-[#D97706] font-medium mt-1 flex items-center gap-1">
+                                                    <img src={lockIcon} alt="" className="w-3 h-3 md:w-4 md:h-4" /> Seats filled. Next batch starts on 01 Jul 2026
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="flex gap-3 items-start">
-                                    <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                        <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
+                                <div className="flex gap-4 items-start">
+                                    <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                        <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" /></svg>
                                     </div>
                                     <div>
-                                        <p className="text-lg font-medium text-[#475569] mb-3">Placement Support</p>
-                                        <ul className="text-sm text-slate-500 space-y-1.5 list-disc ml-4">
+                                        <p className="text-base md:text-lg font-medium text-[#475569] mb-2 md:mb-3">Placement Support</p>
+                                        <ul className="text-xs md:text-sm text-slate-500 space-y-1.5 list-disc ml-4">
                                             <li>Aptitude Training</li>
                                             <li>Soft Skills Training</li>
                                             <li>Resume Preparation</li>
@@ -130,71 +130,71 @@ const PricingSection = () => {
                                 </div>
 
                                 <div className="space-y-6">
-                                    <div className="flex gap-3 items-center">
-                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                    <div className="flex gap-4 items-center">
+                                        <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                            <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                                         </div>
                                         <div>
-                                            <p className="text-lg font-medium text-[#475569]">10+ Real-time Projects for strong resume</p>
+                                            <p className="text-base md:text-lg font-medium text-[#475569]">10+ Real-time Projects for strong resume</p>
                                         </div>
                                     </div>
 
-                                    <div className="flex gap-3 items-center">
-                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                    <div className="flex gap-4 items-center">
+                                        <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                            <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                         </div>
                                         <div>
-                                            <p className="text-lg font-medium text-[#475569]">24/7 Online Lab Access</p>
+                                            <p className="text-base md:text-lg font-medium text-[#475569]">24/7 Online Lab Access</p>
                                         </div>
                                     </div>
 
-                                    <div className="flex gap-3 items-center">
-                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+                                    <div className="flex gap-4 items-center">
+                                        <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                            <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
                                         </div>
                                         <div>
-                                            <p className="text-sm text-slate-500">NxtWave Intensive is not a Job Guarantee Program. ⓘ</p>
+                                            <p className="text-xs md:text-sm text-slate-500">NxtWave Intensive is not a Job Guarantee Program. ⓘ</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="grid grid-cols-1 gap-4">
-                                    <div className="flex gap-3 items-center">
-                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <div className="grid grid-cols-1 gap-4 md:gap-4">
+                                    <div className="flex gap-4 items-center">
+                                        <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                            <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                         </div>
                                         <div>
-                                            <p className="text-md font-medium text-[#475569]">3 Hours classes and 3 Hours Labs Everyday</p>
+                                            <p className="text-base md:text-md font-medium text-[#475569]">3 Hours classes and 3 Hours Labs Everyday</p>
                                         </div>
                                     </div>
 
-                                    <div className="flex gap-3 items-center">
-                                        <div className=" rounded-full flex items-center justify-center flex-shrink-0 text-blue-500 aspect-square">
-                                            <svg className="w-12 h-12 p-2 bg-blue-100 rounded-full " fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                                    <div className="flex gap-4 items-center">
+                                        <div className="flex-none w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-blue-500 bg-blue-100 p-2">
+                                            <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                                         </div>
                                         <div>
-                                            <p className="text-md font-medium text-[#475569]">Trainers: IIT alumni & Top MNCs like Amazon, Microsoft</p>
+                                            <p className="text-base md:text-md font-medium text-[#475569]">Trainers: IIT alumni & Top MNCs like Amazon, Microsoft</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Horizontal Line */}
-                            <div className="border-t border-slate-100 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-                                <div className="flex items-center gap-8">
+                            <div className="border-t border-slate-100 pt-8 mt-12 flex flex-col md:flex-row justify-between items-center gap-8 w-full">
+                                <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8 text-center sm:text-left">
                                     <div className="flex flex-col">
-                                        <span className="text-slate-400 text-xl font-bold line-through">₹75,000/-</span>
-                                        <span className="text-5xl font-extrabold text-[#183b56] mt-1">₹49,000/-</span>
+                                        <span className="text-slate-400 text-lg md:text-xl font-bold line-through">₹75,000/-</span>
+                                        <span className="text-4xl md:text-5xl font-extrabold text-[#183b56] mt-1">₹49,000/-</span>
                                         <span className="text-sm text-slate-400 font-bold">Non-refundable Upfront Fee</span>
                                     </div>
-                                    <div className="text-5xl text-[#5046e5] font-bold">+</div>
+                                    <div className="text-3xl md:text-5xl text-[#5046e5] font-bold">+</div>
                                     <div className="flex flex-col">
-                                        <span className="text-3xl font-bold text-[#183b56]">12% of Annual CTC</span>
+                                        <span className="text-2xl md:text-3xl font-bold text-[#183b56]">12% of Annual CTC</span>
                                         <span className="text-sm text-slate-400 font-bold mt-1">Pay after you get a job</span>
                                     </div>
                                 </div>
-                                <div className="relative border border-slate-200 rounded-2xl p-6 pr-40 bg-[#f8fafc] flex flex-col gap-2">
+                                <div className="w-full md:w-auto relative border border-slate-200 rounded-2xl p-6 md:pr-40 bg-[#f8fafc] flex flex-col md:block gap-4">
                                     <div
-                                        className="absolute -top-3 left-0 text-white text-xs uppercase font-bold px-4 py-1.5 flex items-center"
+                                        className="absolute -top-3 left-0 md:left-0 text-white text-[10px] md:text-xs uppercase font-bold px-4 py-1.5 flex items-center z-10"
                                         style={{
                                             backgroundImage: 'url(https://cdn.prod.website-files.com/6413e0030367922facca6873/641bfef222ca746d6bd6ece3_Slice%201.png)',
                                             backgroundSize: '100% 100%',
@@ -203,15 +203,20 @@ const PricingSection = () => {
                                     >
                                         Additional Scholarships Up To
                                     </div>
-                                    <div className="text-4xl font-bold text-[#5046e5] mt-4">₹16,000/-</div>
-                                    <a href="#" className="text-sm text-orange-500 font-semibold flex items-center gap-1 hover:text-orange-600 transition-colors">
-                                        Book a Free Demo to know more.
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                        </svg>
-                                    </a>
-                                    <div className="absolute right-4 top-1/2 -translate-y-1/2">
-                                        <img src={scholarshipImage} className="w-32 h-32 object-contain" alt="Scholarship" />
+
+                                    <div className="flex flex-row md:block items-center justify-between gap-4 mt-2 md:mt-4">
+                                        <div>
+                                            <div className="text-3xl md:text-4xl font-bold text-[#5046e5]">₹16,000/-</div>
+                                            <a href="#" className="text-xs md:text-sm text-orange-500 font-semibold flex items-center gap-1 hover:text-orange-600 transition-colors mt-1">
+                                                Book a Free Demo to know more.
+                                                <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div className="md:absolute md:right-4 md:top-1/2 md:-translate-y-1/2 flex-shrink-0">
+                                            <img src={scholarshipImage} className="w-24 h-24 md:w-32 md:h-32 object-contain" alt="Scholarship" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

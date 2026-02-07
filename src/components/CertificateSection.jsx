@@ -7,59 +7,47 @@ import icon3 from '../assets/certified/image copy 3.png';
 const CertificateSection = () => {
     const features = [
         {
-            icon: (
-                <div className="w-16 h-16 flex items-center justify-center">
-                    <img src={icon1} alt="IRC" className="w-full h-full object-contain" />
-                </div>
-            ),
+            iconSrc: icon1,
             title: "Industry-Ready Certification [IRC]",
             description: "Unlike any academic certificate, for the first-time in India, IRC certifies your job readiness."
         },
         {
-            icon: (
-                <div className="w-16 h-16 flex items-center justify-center">
-                    <img src={icon2} alt="Shareable" className="w-full h-full object-contain" />
-                </div>
-            ),
+            iconSrc: icon2,
             title: "Shareable, Credible and Official",
             description: "Add it to your LinkedIn, share it on Twitter & WhatsApp, or via Email. Make your profile stand out everywhere."
         },
         {
-            icon: (
-                <div className="w-16 h-16 flex items-center justify-center">
-                    <img src={icon3} alt="Compete" className="w-full h-full object-contain" />
-                </div>
-            ),
+            iconSrc: icon3,
             title: "Let companies compete for you",
             description: "IRC certifies your industry-readiness and gets you placed with higher salaries."
         }
     ];
 
     return (
-        <section className="py-24 bg-white overflow-hidden" id="certificates">
-            <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <section className="py-12 md:py-24 bg-white overflow-hidden" id="certificates">
+            <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
                 {/* Left Column: Details */}
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-8 md:gap-10">
                     <div>
-                        <h2 className="text-5xl font-bold text-[#183b56] mb-4 relative inline-block">
+                        <h2 className="text-3xl md:text-5xl font-bold text-[#183b56] mb-4 relative inline-block">
                             Get Certified
                             <div className="absolute -bottom-1 left-0 w-full h-[3px] bg-[#7c3aed] rounded-full"></div>
                         </h2>
-                        <p className="text-slate-600 text-[17px] leading-relaxed mt-6 max-w-lg">
+                        <p className="text-slate-600 text-[15px] md:text-[17px] leading-relaxed mt-4 md:mt-6 max-w-lg">
                             Yes, you'll get a certificate representing your Industry Readiness once you submit your projects and clear the pre placement test.
                         </p>
                     </div>
 
-                    <div className="flex flex-col gap-5 mt-4">
+                    <div className="flex flex-col gap-6 md:gap-5 mt-4">
                         {features.map((feature, index) => (
-                            <div key={index} className="flex gap-2 group items-start">
-                                <div className="flex-shrink-0 transition-transform group-hover:scale-110">
-                                    {feature.icon}
+                            <div key={index} className="flex items-start gap-4 md:gap-3 group">
+                                <div className="flex-none w-12 h-12 md:w-16 md:h-16 flex items-center justify-center transition-transform group-hover:scale-110">
+                                    <img src={feature.iconSrc} alt={feature.title} className="w-full h-full object-contain" />
                                 </div>
-                                <div>
+                                <div className="flex-1 text-left">
                                     <h3 className="text-lg font-bold text-[#183b56] mb-1">{feature.title}</h3>
-                                    <p className="text-slate-500 text-[15px] leading-relaxed max-w-sm">
+                                    <p className="text-slate-500 text-[14px] md:text-[15px] leading-relaxed">
                                         {feature.description}
                                     </p>
                                 </div>

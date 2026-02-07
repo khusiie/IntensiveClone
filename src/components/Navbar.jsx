@@ -18,11 +18,11 @@ const Navbar = () => {
                 <div className="h-1 bg-[#ec4899]"></div>
 
                 <div className="max-w-[1300px] mx-auto px-6">
-                    <div className="flex items-center justify-between h-24">
+                    <div className="flex items-center justify-between h-[88px]">
 
                         {/* Logo */}
                         <a href="#" className="flex items-center">
-                            <img src="/src/assets/image.png" alt="NxtWave Intensive" className="h-14 object-contain" />
+                            <img src="/src/assets/image.png" alt="NxtWave Intensive" className="h-[52px] object-contain" />
                         </a>
 
                         {/* Desktop Navigation */}
@@ -42,7 +42,7 @@ const Navbar = () => {
                                 href="#login"
                                 className="text-[16px] font-bold text-[#7c3aed] hover:text-[#6d28d9] transition-colors flex items-center"
                             >
-                                Login<span className="ml-1 font-bold">→</span>
+                                Login<span className="ml-1 font-black">→</span>
                             </a>
 
                         </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
             {isMenuOpen && (
                 <div className="fixed inset-0 z-[100] md:hidden">
                     {/* Dark Overlay Background */}
-                    <div className="absolute inset-0 bg-[#1e3a5f] pt-4 px-8">
+                    <div className="absolute inset-0 bg-[#1e3a5f] pt-4 px-6">
 
                         {/* Close Button */}
                         <button

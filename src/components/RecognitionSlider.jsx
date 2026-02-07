@@ -18,15 +18,15 @@ const RecognitionSlider = () => {
         {
             bgColor: 'bg-[#1a365d]',
             content: (
-                <div className="flex flex-col md:flex-row items-center w-full h-full p-8 md:p-12 gap-8 md:gap-12 relative overflow-hidden group">
+                <div className="flex flex-col md:flex-row items-center w-full h-full p-6 md:p-12 gap-6 md:gap-12 relative overflow-hidden group">
                     <div className="flex-[1.2] text-white z-10 text-center md:text-left">
-                        <h2 className="text-2xl md:text-4xl font-bold leading-tight uppercase tracking-tight">
+                        <h2 className="text-xl md:text-4xl font-bold leading-tight uppercase tracking-tight">
                             <span className="text-[#fbbf24]">World Economic Forum</span> recognized <span className="text-[#fbbf24]">NxtWave</span> as <span className="text-[#fbbf24]">"Technology Pioneer 2024"</span>
                         </h2>
                     </div>
                     <div className="flex-1 relative z-10 flex justify-center">
                         <div className="p-1 px-1.5 border-[6px] border-[#fbbf24] rounded-2xl bg-[#fbbf24] shadow-[0_20px_60px_rgba(0,0,0,0.5)] transform rotate-2 group-hover:rotate-0 transition-all duration-500">
-                            <div className="rounded-xl overflow-hidden aspect-[2/1.1] w-full min-w-[320px] max-w-[450px]">
+                            <div className="rounded-xl overflow-hidden aspect-[2/1.1] w-full max-w-[450px]">
                                 <img
                                     src={econImg1}
                                     alt="World Economic Forum"
@@ -41,15 +41,15 @@ const RecognitionSlider = () => {
         {
             bgColor: 'bg-[#1a365d]',
             content: (
-                <div className="flex flex-col md:flex-row items-center w-full h-full p-8 md:p-12 gap-8 md:gap-12 relative overflow-hidden group">
+                <div className="flex flex-col md:flex-row items-center w-full h-full p-6 md:p-12 gap-6 md:gap-12 relative overflow-hidden group">
                     <div className="flex-[1.2] text-white z-10 text-center md:text-left">
-                        <h2 className="text-2xl md:text-3xl font-bold leading-relaxed uppercase tracking-tight">
+                        <h2 className="text-xl md:text-3xl font-bold leading-relaxed uppercase tracking-tight">
                             Founders <span className="text-[#fbbf24]">Mr. Anupam Pedarla</span> and <span className="text-[#fbbf24]">Mr. Sashank Gujjula</span> made it to the <span className="text-[#fbbf24]">prestigious 2024 Forbes India 30 Under 30 list!</span>
                         </h2>
                     </div>
                     <div className="flex-1 relative z-10 flex justify-center">
                         <div className="p-1 px-1.5 border-[6px] border-[#fbbf24] rounded-2xl bg-[#fbbf24] shadow-[0_20px_60px_rgba(0,0,0,0.5)] transform -rotate-2 group-hover:rotate-0 transition-all duration-500">
-                            <div className="rounded-xl overflow-hidden aspect-[2/1.3] w-full min-w-[320px] max-w-[450px]">
+                            <div className="rounded-xl overflow-hidden aspect-[2/1.3] w-full max-w-[450px]">
                                 <img
                                     src={econImg2}
                                     alt="Forbes 30 Under 30"
@@ -64,9 +64,9 @@ const RecognitionSlider = () => {
         {
             bgColor: 'bg-[#1a365d]',
             content: (
-                <div className="flex flex-col md:flex-row items-center w-full h-full p-8 md:p-12 gap-8 md:gap-12 relative overflow-hidden group">
+                <div className="flex flex-col md:flex-row items-center w-full h-full p-6 md:p-12 gap-6 md:gap-12 relative overflow-hidden group">
                     <div className="flex-[1.2] text-white z-10 text-center md:text-left">
-                        <h2 className="text-2xl md:text-4xl font-bold leading-tight uppercase tracking-tight">
+                        <h2 className="text-xl md:text-4xl font-bold leading-tight uppercase tracking-tight">
                             Recognized for <span className="text-[#fbbf24]">Innovation</span> and <span className="text-[#fbbf24]">Impact</span> in Tech Education
                         </h2>
                     </div>
@@ -103,7 +103,7 @@ const RecognitionSlider = () => {
                             className={`rounded-[32px] overflow-hidden flex-shrink-0 transition-all duration-700 ${index === currentSlide ? 'scale-100 opacity-100 shadow-2xl' : 'scale-[0.88] opacity-30 blur-[2px]'}`}
                             style={{
                                 width: `${slideWidth}px`,
-                                height: viewportWidth < 768 ? '320px' : '380px',
+                                height: viewportWidth < 768 ? '480px' : '380px',
                                 marginRight: `${gap}px`
                             }}
                         >
